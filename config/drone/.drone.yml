@@ -1,0 +1,9 @@
+---
+kind: pipeline
+name: terraform
+
+steps:
+- name: install dependencies
+  image: node:8.10
+  commands:
+  - npm i
