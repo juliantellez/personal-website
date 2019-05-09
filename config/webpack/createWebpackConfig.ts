@@ -5,7 +5,7 @@ import createWebpackPluginsArray from './createPluginsArray';
 import EnvironmentArgs from './EnvironmentArgs';
 import typescriptRule from './rules/typescript';
 
-const PATH_SRC = path.resolve(__dirname, '..', '..', 'src', 'main.tsx');
+const PATH_SRC = path.resolve(__dirname, '..', '..', 'src', 'main');
 const PATH_BUILD = path.resolve(__dirname, '..', '..', 'dist');
 
 const createWebpackConfig = (envArgs: any): Configuration => {
