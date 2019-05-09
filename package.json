@@ -7,6 +7,7 @@
     "dev": "sh ./scripts/dev.sh",
     "build": "sh ./scripts/build.sh",
     "build:analyze": "npm run build -- --analyze",
+    "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' './**/*.{ts,tsx}' --exclude './**/*.d.ts'",
     "prettier": "prettier --no-config --write '**/*.{ts,tsx,css}'"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "ts-loader": "^4.4.1",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.16.0",
     "typescript": "^3.1.3",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^3.3.2",
