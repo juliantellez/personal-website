@@ -4,7 +4,7 @@ class EnvironmentArgs {
 
     constructor(envArgs: any) {
         this.NODE_ENV = envArgs.NODE_ENV;
-        this.analyze = envArgs.analyze;
+        this.analyze = envArgs.analyze === 'true' ? true : false;
     }
 }
 

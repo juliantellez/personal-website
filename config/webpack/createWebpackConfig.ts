@@ -8,11 +8,11 @@ import typescriptRule from './rules/typescript';
 const PATH_SRC = path.resolve(__dirname, '..', '..', 'src', 'main');
 const PATH_BUILD = path.resolve(__dirname, '..', '..', 'dist');
 
-const createWebpackConfig = (envArgs: any): Configuration => {
-    const environment = new EnvironmentArgs(envArgs);
+const createWebpackConfig = (args: any): Configuration => {
+    const envArgs = new EnvironmentArgs(args);
 
     return {
-        mode: environment.NODE_ENV,
+        mode: envArgs.NODE_ENV,
         entry: {
             main: PATH_SRC
         },
@@ -27,7 +27,7 @@ const createWebpackConfig = (envArgs: any): Configuration => {
         module: {
             rules: [typescriptRule]
         },
-        plugins: createWebpackPluginsArray(environment)
+        plugins: createWebpackPluginsArray(envArgs)
     };
 };
 
