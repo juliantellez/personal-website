@@ -8,6 +8,16 @@ steps:
   commands:
   - npm i
 
+- name: fmt
+  image: node:8.10
+  commands:
+  - npm run prettier:check
+
+- name: lint
+  image: node:8.10
+  commands:
+  - npm run lint:ts
+
 - name: build
   image: node:8.10
   commands:

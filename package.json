@@ -7,7 +7,7 @@
     "dev": "sh ./scripts/dev.sh",
     "build": "sh ./scripts/build.sh",
     "build:analyze": "npm run build -- --analyze",
-    "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' './**/*.{ts,tsx}' --exclude './**/*.d.ts'",
+    "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' '**/*.{ts,tsx}' --exclude './**/*.d.ts'",
     "lint:ts:fix": "npm run lint:ts -- --fix",
     "prettier": "prettier --config ./config/prettier/.prettierrc --write '**/*.{ts,tsx,css}'",
     "prettier:check": "prettier --config ./config/prettier/.prettierrc  --list-different '**/*.{ts,tsx,css}'"

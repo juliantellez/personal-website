@@ -13,10 +13,10 @@ const createWebpackPluginsArray = (envArgs: EnvironmentArgs): Plugin[] => {
         new HtmlWebpackPlugin({
             template: path.join(PATH_ROOT, 'assets', 'index.html')
         }),
-        // new CopyWebpackPlugin([{
-        //     from: path.join(PATH_ROOT, 'assets', 'fonts'),
-        //     to: path.join(PATH_ROOT, 'dist')
-        // }]),
+        new CopyWebpackPlugin([{
+            from: path.join(PATH_ROOT, 'assets', 'fonts'),
+            to: path.join(PATH_ROOT, 'dist')
+        }]),
         new EnvironmentPlugin({
             NODE_ENV: envArgs.NODE_ENV
         })
