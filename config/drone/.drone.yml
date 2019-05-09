@@ -7,3 +7,8 @@ steps:
   image: node:8.10
   commands:
   - npm i
+
+- name: build
+  image: node:8.10
+  commands:
+  - npm run build
