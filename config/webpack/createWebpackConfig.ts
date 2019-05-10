@@ -19,9 +19,21 @@ const createWebpackConfig = (args: any): Configuration => {
         },
         output: {
             filename: '[name].js',
-            path: PATH_BUILD
+            path: PATH_BUILD,
+            pathinfo: false
         },
         devtool: 'source-map',
+        optimization: {
+            removeAvailableModules: false,
+            removeEmptyChunks: false,
+            splitChunks: {
+                chunks: 'initial',
+                cacheGroups: {
+                    vendors: false,
+                    default: false
+                } as any
+            }
+        },
         resolve: {
             extensions: ['.ts', '.tsx', '.js']
         },
