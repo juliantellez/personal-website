@@ -1,13 +1,11 @@
 import * as React from 'react';
 
-interface IAppProps {
-    config?: any;
-}
+import Root from './components/Root/Root';
 
-class App extends React.Component<IAppProps> {
-    public render(): JSX.Element {
-        return <div>hello world</div>;
-    }
-}
+const App = () => (
+    <div>
+        <Root />
+    </div>
+);
 
 export default App;

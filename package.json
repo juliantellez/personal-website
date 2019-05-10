@@ -4,7 +4,9 @@
   "description": "personal website",
   "main": "dist/main.js",
   "scripts": {
-    "dev": "sh ./scripts/dev.sh",
+    "types:css": "rm -rf **/*.css.d.ts && tcm src --camelCase",
+    "types:css:watch": "npm run types:css -- --watch",
+    "dev": "npm run types:css | sh ./scripts/dev.sh",
     "build": "sh ./scripts/build.sh",
     "build:analyze": "npm run build -- --analyze",
     "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' '**/*.{ts,tsx}' --exclude './**/*.d.ts'",
@@ -39,6 +41,7 @@
     "tsconfig-paths": "^3.8.0",
     "tslint": "^5.16.0",
     "tslint-eslint-rules": "^5.4.0",
+    "typed-css-modules": "^0.4.2",
     "typescript": "^3.1.3",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^3.3.2",

@@ -3,6 +3,7 @@ import {Configuration} from 'webpack';
 
 import createWebpackPluginsArray from './createPluginsArray';
 import EnvironmentArgs from './EnvironmentArgs';
+import cssRule from './rules/css';
 import typescriptRule from './rules/typescript';
 
 const PATH_SRC = path.resolve(__dirname, '..', '..', 'src', 'main');
@@ -25,7 +26,7 @@ const createWebpackConfig = (args: any): Configuration => {
             extensions: ['.ts', '.tsx', '.js']
         },
         module: {
-            rules: [typescriptRule]
+            rules: [cssRule, typescriptRule]
         },
         plugins: createWebpackPluginsArray(envArgs)
     };
