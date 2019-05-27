@@ -1,0 +1,24 @@
+.main {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 20px;
+    background-color: #55868ce6;
+    border-radius: 6px;
+    color: #88AAAE;
+    font-family: monospace;
+    min-width: 235px;
+    text-align: center;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 5px 16px;
+    min-width: 100px;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #dd7a58e6;
+    border-color: #dd7a58e6;
+    color: #cee6e8;
+}
