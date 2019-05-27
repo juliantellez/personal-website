@@ -1,4 +1,4 @@
-import Colour from "../Colour";
+import Colour from '../Colour';
 
 interface ICellState {
     colour: Colour;
@@ -13,4 +13,4 @@ interface ICell {
 export {
     ICellState,
     ICell as default
-}
+};

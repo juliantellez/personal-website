@@ -1,9 +1,9 @@
-import { Subscription, BehaviorSubject } from "rxjs";
+import {BehaviorSubject, Subscription} from 'rxjs';
 
-import createResizeStream from "./Streams/createResizeStream";
-import connectSubscriptions from "./connectSubscriptions";
-import IProducers from "./Interfaces/IProducers";
-import drawGrid from "./Utils/drawGrid";
+import connectSubscriptions from './connectSubscriptions';
+import IProducers from './Interfaces/IProducers';
+import createResizeStream from './Streams/createResizeStream';
+import drawGrid from './Utils/drawGrid';
 
 const RESOLUTION = 10;
 
@@ -11,7 +11,7 @@ class Ui {
     public resolution: number = RESOLUTION;
     public canvas: HTMLCanvasElement;
     public producers: IProducers;
-    public subscribers: Array<Subscription>;
+    public subscribers: Subscription[];
 
     constructor(canvasNode: HTMLCanvasElement) {
         this.canvas = canvasNode;
@@ -55,26 +55,10 @@ class Ui {
     /**
      * draw
      */
-    public draw(grid, dimensions) {
+    public draw(grid, dimensions): void {
         requestAnimationFrame(
             () => drawGrid(this.canvas, grid, dimensions, this.resolution)
-        ) 
-    }
-
-    private addProducers(): void {
-        this.producers = {
-            resolution$: new BehaviorSubject(RESOLUTION),
-            resize$: createResizeStream(),
-        }
-    }
-
-    /**
-     * addListeners
-     */
-    private addSubscribers(): void {
-        this.subscribers = [
-            ...connectSubscriptions(this),
-        ]
+        );
     }
 
     /**
@@ -84,7 +68,23 @@ class Ui {
         this.subscribers
             .forEach((subscription: Subscription) =>
                 subscription.unsubscribe()
-            )
+            );
+    }
+
+    private addProducers(): void {
+        this.producers = {
+            resolution$: new BehaviorSubject(RESOLUTION),
+            resize$: createResizeStream()
+        };
+    }
+
+    /**
+     * addListeners
+     */
+    private addSubscribers(): void {
+        this.subscribers = [
+            ...connectSubscriptions(this)
+        ];
     }
 }
 

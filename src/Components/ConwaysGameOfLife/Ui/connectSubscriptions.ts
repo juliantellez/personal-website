@@ -1,11 +1,11 @@
-import { Subscription } from "rxjs";
+import {Subscription} from 'rxjs';
 
-import Ui from "./Ui";
+import Ui from './Ui';
 
-const connectSubscriptions = (ui: Ui): Array<Subscription> => {
+const connectSubscriptions = (ui: Ui): Subscription[] => {
     return [
-        ui.producers.resize$.subscribe(ui.resize.bind(ui)),
-    ]
-} 
+        ui.producers.resize$.subscribe(ui.resize.bind(ui))
+    ];
+};
 
 export default connectSubscriptions;

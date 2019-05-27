@@ -1,14 +1,14 @@
-import Cell from "../Cell";
+import Cell from '../Cell';
 
 const countNeighbours = (
-    prevGrid: Array<Array<Cell>>,
-    column: number, 
-    row: number, 
-    columns: number, 
+    prevGrid: Cell[][],
+    column: number,
+    row: number,
+    columns: number,
     rows: number
     ): [number, Cell[]] => {
     let sum = 0;
-    let neighbours: Cell[] = []
+    const neighbours: Cell[] = [];
 
     for (let adjacentColumn = -1; adjacentColumn < 2; adjacentColumn++) {
         for (let adjacentRow = -1; adjacentRow < 2; adjacentRow++) {
@@ -17,14 +17,14 @@ const countNeighbours = (
                 (adjacentColumn + column + columns) % columns;
             const nextRow = (adjacentRow + row + rows) % rows;
 
-            if(prevGrid[nextColumn]&& prevGrid[nextColumn][nextRow]) {
-                neighbours.push(prevGrid[nextColumn][nextRow])
+            if (prevGrid[nextColumn] && prevGrid[nextColumn][nextRow]) {
+                neighbours.push(prevGrid[nextColumn][nextRow]);
                 sum += prevGrid[nextColumn][nextRow].status;
             }
         }
     }
 
-    if(prevGrid[column] && prevGrid[column][row]) {
+    if (prevGrid[column] && prevGrid[column][row]) {
         sum -= prevGrid[column][row].status;
     }
 

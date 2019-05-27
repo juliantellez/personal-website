@@ -1,4 +1,4 @@
-import Colour from "./Colour";
+import Colour from './Colour';
 
 /**
  * 0: dead
@@ -9,15 +9,15 @@ class Cell {
     public colour: Colour;
 
     constructor(status: number, colour ?: Colour) {
-        this.nextState(status, colour)
+        this.nextState(status, colour);
     }
 
     /**
      * addState
      */
-    public nextState(status: number, colour ?: Colour) {
-        this.status = status
-        this.colour = colour || new Colour()
+    public nextState(status: number, colour ?: Colour): void {
+        this.status = status;
+        this.colour = colour || new Colour();
     }
 }
 

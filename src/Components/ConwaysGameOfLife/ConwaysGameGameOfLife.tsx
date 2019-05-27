@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import GameOfLife from './GameOfLife'
+import GameOfLife from './GameOfLife';
 import Settings from './Settings/Settings';
 
 interface IState {
@@ -8,31 +8,31 @@ interface IState {
 }
 
 class ConwaysGameOfLife extends React.Component {
+
+    public state: IState = {};
     private containerRef: HTMLCanvasElement;
     private gameOfLife: GameOfLife;
 
-    state: IState = {}
-
-    componentDidMount() {
-        this.gameOfLife = new GameOfLife(this.containerRef)
+    public componentDidMount(): void {
+        this.gameOfLife = new GameOfLife(this.containerRef);
         this.gameOfLife.mount();
-        this.setState({gameOfLife: this.gameOfLife})
+        this.setState({gameOfLife: this.gameOfLife});
     }
 
-    componentWillUnmount() {
+    public componentWillUnmount(): void {
         this.gameOfLife.unmount();
     }
 
-    private setContainerRef = element => (this.containerRef = element);
-
-    render() {
+    public render(): React.ReactElement {
         return (
             <React.Fragment>
                 <canvas ref={this.setContainerRef} />
                 {this.state.gameOfLife && <Settings gameOfLife={this.state.gameOfLife} />}
             </React.Fragment>
-        )
+        );
     }
+
+    private setContainerRef = element => (this.containerRef = element);
 }
 
 export default ConwaysGameOfLife;

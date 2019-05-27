@@ -1,8 +1,8 @@
-import { Observable, BehaviorSubject } from "rxjs";
+import {BehaviorSubject, Observable} from 'rxjs';
 
 interface IProducers {
     resolution$: BehaviorSubject<number>;
     resize$: Observable<Event>;
 }
 
-export default IProducers
+export default IProducers;

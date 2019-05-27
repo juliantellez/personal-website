@@ -1,8 +1,8 @@
-import { BehaviorSubject, Observable } from "rxjs";
-import { merge, throttleTime, map, withLatestFrom } from "rxjs/operators";
+import {BehaviorSubject, Observable} from 'rxjs';
+import {map, merge, throttleTime, withLatestFrom} from 'rxjs/operators';
 
-import createTouchMoveStream from "./createTouchMoveStream";
-import createMouseMoveStream from "./createMouseMoveStream";
+import createMouseMoveStream from './createMouseMoveStream';
+import createTouchMoveStream from './createTouchMoveStream';
 
 /**
  * creates mouse and touch event streams
@@ -18,8 +18,8 @@ const createInteractionStream = (
             withLatestFrom(resolution$),
             map(([touchEvent, resolution]) => [
                 Math.floor(touchEvent.clientX / resolution),
-                Math.floor(touchEvent.clientY / resolution),
+                Math.floor(touchEvent.clientY / resolution)
             ])
-        )
+        );
 
 export default createInteractionStream;

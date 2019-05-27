@@ -1,4 +1,4 @@
-import { Subject } from "rxjs";
+import {Subject} from 'rxjs';
 
 interface IProducers {
     start$: Subject<void>;

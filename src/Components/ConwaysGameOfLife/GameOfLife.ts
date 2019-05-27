@@ -1,12 +1,12 @@
-import { Subscription } from "rxjs";
+import {Subscription} from 'rxjs';
 
-import Rules from "./Rules/Rules";
-import Ui from "./Ui/Ui";
+import Rules from './Rules/Rules';
+import Ui from './Ui/Ui';
 
 class GameOfLife {
     public ui: Ui;
     public rules: Rules;
-    public subscribers: Array<Subscription>;
+    public subscribers: Subscription[];
 
     constructor(canvasNode: HTMLCanvasElement) {
         this.ui = new Ui(canvasNode);

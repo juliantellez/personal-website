@@ -1,15 +1,14 @@
-import { Observable } from "rxjs";
-import { scan, startWith, map } from "rxjs/operators";
+import {Observable} from 'rxjs';
+import {map, scan, startWith} from 'rxjs/operators';
 
-import GameOfLife from "../../GameOfLife";
+import GameOfLife from '../../GameOfLife';
+import Cell from '../Cell';
+import createNextGrid from '../Utils/createNextGrid';
+import randomGrid from '../Utils/randomGrid';
 
-import randomGrid from "../Utils/randomGrid";
+import createTimerStream from './createTimerStream';
 
-import createTimerStream from "./createTimerStream";
-import createNextGrid from "../Utils/createNextGrid";
-import Cell from "../Cell";
-
-type GridType = Array<Array<Cell>>
+type GridType = Cell[][];
 
 const createGridStream = (
     gameOfLife: GameOfLife
@@ -19,6 +18,6 @@ const createGridStream = (
             startWith(randomGrid(gameOfLife.rules.getDimensions())),
             scan((prevGrid: GridType) => createNextGrid(prevGrid, gameOfLife.rules.getDimensions())),
             map((nextGrid: GridType) => [nextGrid, gameOfLife.rules.getDimensions()])
-        )
+        );
 
 export default createGridStream;

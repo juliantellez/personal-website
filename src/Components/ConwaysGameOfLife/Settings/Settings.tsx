@@ -1,10 +1,11 @@
 import * as React from 'react';
+
 import GameOfLife from '../GameOfLife';
 
 import * as styles from './settings.css';
 
 interface ISettings {
-    gameOfLife: GameOfLife
+    gameOfLife: GameOfLife;
 }
 
 interface IState {
@@ -16,40 +17,40 @@ interface IState {
 
 class Settings extends React.Component<ISettings> {
 
-    state: IState = {
+    public state: IState = {
         generation: 1,
-        resumeToggle: 'resume',
-    }
+        resumeToggle: 'resume'
+    };
 
-    componentWillMount() {
-        this.onResumeToggle()
-        this.setGenerationChange()
+    public componentWillMount(): void {
+        this.onResumeToggle();
+        this.setGenerationChange();
         this.setState({
             rate: this.props.gameOfLife.rules.rate
-        })
+        });
     }
 
-    setGenerationChange () {
+    public setGenerationChange(): void {
         this.props.gameOfLife.rules.producers.generation$
             .subscribe(generation => {
-                this.setState({generation})
-            })
+                this.setState({generation});
+            });
     }
 
-    onResolutionChange(event) {
+    public onResolutionChange(event) : void {
         event.preventDefault();
-        const {value} = event.currentTarget
+        const {value} = event.currentTarget;
 
         this.props.gameOfLife.ui.setResolution(value);
 
         this.setState({
-            resolution: value,
-        })
+            resolution: value
+        });
     }
 
-    onRateChange(event) {
+    public onRateChange(event): void {
         event.preventDefault();
-        const {value} = event.currentTarget
+        const {value} = event.currentTarget;
 
         this.props.gameOfLife.rules.setRate(value);
         this.props.gameOfLife.rules.producers.start$.next();
@@ -57,37 +58,37 @@ class Settings extends React.Component<ISettings> {
         this.setState({
             rate: value,
             resumeToggle: 'pause'
-        })
+        });
     }
 
-    onResume() {
+    public onResume(): void {
         this.props.gameOfLife.rules.producers.start$.next();
     }
 
-    onPause() {
+    public onPause(): void {
         this.props.gameOfLife.rules.producers.stop$.next();
     }
 
-    onResumeToggle() {
+    public onResumeToggle(): void {
         this.setState((prev: IState) => {
-            const {resumeToggle} = prev
-            let nextResumeToggle
+            const {resumeToggle} = prev;
+            let nextResumeToggle;
 
             if (resumeToggle === 'resume') {
-                nextResumeToggle = 'pause'
-                this.onResume()
+                nextResumeToggle = 'pause';
+                this.onResume();
             } else {
-                nextResumeToggle = 'resume'
-                this.onPause()
+                nextResumeToggle = 'resume';
+                this.onPause();
             }
 
             return {
-                resumeToggle: nextResumeToggle,
-            }
-        })
+                resumeToggle: nextResumeToggle
+            };
+        });
     }
 
-    render() {
+    public render(): React.ReactElement {
         return (
             <div className={styles.main}>
                 <div>Generation: {this.state.generation}</div>
@@ -99,7 +100,7 @@ class Settings extends React.Component<ISettings> {
                         onChange={this.onResolutionChange.bind(this)} />
                     <div>Resolution: {this.state.resolution}</div>
                 </div> */}
-                
+
                 <div>
                     <input
                         type="range"
@@ -109,9 +110,13 @@ class Settings extends React.Component<ISettings> {
                     <div>Rate: {this.state.rate}ms</div>
                 </div>
 
-                <button className={styles.button} onClick={this.onResumeToggle.bind(this)}>{this.state.resumeToggle}</button>
+                <button
+                    className={styles.button}
+                    onClick={this.onResumeToggle.bind(this)}>
+                    {this.state.resumeToggle}
+                </button>
             </div>
-        )
+        );
     }
 }
 

@@ -1,10 +1,10 @@
-import { Subscription, Subject } from "rxjs";
+import {Subject, Subscription} from 'rxjs';
 
-import GameOfLife from "../GameOfLife";
+import GameOfLife from '../GameOfLife';
 
-import IProducers from "./Interfaces/IProducers";
-import connectSubscriptions from "./connectSubscriptions";
-import Cell from "./Cell";
+import Cell from './Cell';
+import connectSubscriptions from './connectSubscriptions';
+import IProducers from './Interfaces/IProducers';
 
 class Rules {
     public generation = 0;
@@ -13,10 +13,10 @@ class Rules {
     public columns = 0;
     public grid: Cell[][];
     public producers: IProducers;
-    public subscribers: Array<Subscription>;
+    public subscribers: Subscription[];
 
     constructor() {
-        this.addProducers()
+        this.addProducers();
     }
 
     /**
@@ -44,14 +44,14 @@ class Rules {
     /**
      * getDimensions
      */
-    public getDimensions(): Array<number> {
-        return [this.columns, this.rows]
+    public getDimensions(): number[] {
+        return [this.columns, this.rows];
     }
 
     /**
      * setGrid
      */
-    public setGrid(grid: Cell[][]) {
+    public setGrid(grid: Cell[][]): void {
         this.grid = grid;
     }
 
@@ -65,7 +65,7 @@ class Rules {
     /**
      * setGeneration
      */
-    public setGeneration(generation: number) {
+    public setGeneration(generation: number): void {
         this.generation = generation;
         this.producers.generation$.next(generation);
     }
@@ -73,27 +73,7 @@ class Rules {
      * getRate
      */
     public getRate(): number {
-        return this.rate
-    }
-
-    /**
-     * addProducers
-     */
-    private addProducers(): void {
-        this.producers = {
-            start$: new Subject<void>(),
-            stop$: new Subject<void>(),
-            generation$: new Subject<number>(),
-        }
-    }
-
-    /**
-     * addListeners
-     */
-    private addSubscribers(gameOfLife: GameOfLife): void {
-        this.subscribers = [
-            ...connectSubscriptions(gameOfLife),
-        ]
+        return this.rate;
     }
 
     /**
@@ -103,8 +83,28 @@ class Rules {
         this.subscribers
             .forEach((subscription: Subscription) =>
                 subscription.unsubscribe()
-            )
+            );
+    }
+
+    /**
+     * addProducers
+     */
+    private addProducers(): void {
+        this.producers = {
+            start$: new Subject<void>(),
+            stop$: new Subject<void>(),
+            generation$: new Subject<number>()
+        };
+    }
+
+    /**
+     * addListeners
+     */
+    private addSubscribers(gameOfLife: GameOfLife): void {
+        this.subscribers = [
+            ...connectSubscriptions(gameOfLife)
+        ];
     }
 }
 
-export default Rules
+export default Rules;
