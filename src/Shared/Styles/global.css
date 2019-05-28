@@ -1,0 +1,25 @@
+@import './colors';
+
+html,
+button,
+input {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-style: normal;
+    text-decoration: none;
+}
+
+html,
+body,
+:global(#main) {
+    height: 100%;
+}

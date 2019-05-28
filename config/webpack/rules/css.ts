@@ -1,3 +1,5 @@
+import * as postcssVariables from 'postcss-css-variables';
+import * as postcssImport from 'postcss-import';
 import {Rule} from 'webpack';
 
 const cssRule: Rule = {
@@ -13,6 +15,14 @@ const cssRule: Rule = {
                 camelCase: true,
                 url: true,
                 import: true
+            }
+        },
+        {
+            loader: 'postcss-loader',
+            options: {
+                sourceMap: true,
+                ident: 'postcss',
+                plugins: [postcssImport(), postcssVariables()]
             }
         }
     ]
