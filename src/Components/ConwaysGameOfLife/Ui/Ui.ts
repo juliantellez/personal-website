@@ -56,8 +56,8 @@ class Ui {
      * draw
      */
     public draw(grid, dimensions): void {
-        requestAnimationFrame(
-            () => drawGrid(this.canvas, grid, dimensions, this.resolution)
+        requestAnimationFrame(() =>
+            drawGrid(this.canvas, grid, dimensions, this.resolution)
         );
     }
 
@@ -65,10 +65,9 @@ class Ui {
      * removeListeners
      */
     public removeSubscribers(): void {
-        this.subscribers
-            .forEach((subscription: Subscription) =>
-                subscription.unsubscribe()
-            );
+        this.subscribers.forEach((subscription: Subscription) =>
+            subscription.unsubscribe()
+        );
     }
 
     private addProducers(): void {
@@ -82,9 +81,7 @@ class Ui {
      * addListeners
      */
     private addSubscribers(): void {
-        this.subscribers = [
-            ...connectSubscriptions(this)
-        ];
+        this.subscribers = [...connectSubscriptions(this)];
     }
 }
 

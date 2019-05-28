@@ -80,10 +80,9 @@ class Rules {
      * removeListeners
      */
     public removeSubscribers(): void {
-        this.subscribers
-            .forEach((subscription: Subscription) =>
-                subscription.unsubscribe()
-            );
+        this.subscribers.forEach((subscription: Subscription) =>
+            subscription.unsubscribe()
+        );
     }
 
     /**
@@ -101,9 +100,7 @@ class Rules {
      * addListeners
      */
     private addSubscribers(gameOfLife: GameOfLife): void {
-        this.subscribers = [
-            ...connectSubscriptions(gameOfLife)
-        ];
+        this.subscribers = [...connectSubscriptions(gameOfLife)];
     }
 }
 

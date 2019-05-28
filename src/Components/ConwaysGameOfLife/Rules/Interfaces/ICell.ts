@@ -10,7 +10,4 @@ interface ICell {
     state: ICellState;
 }
 
-export {
-    ICellState,
-    ICell as default
-};
+export {ICellState, ICell as default};

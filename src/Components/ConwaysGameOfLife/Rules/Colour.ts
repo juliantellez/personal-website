@@ -7,7 +7,7 @@ class Colour {
     public b: number;
     public a: number;
 
-    constructor(rgb ?: any) {
+    constructor(rgb?: any) {
         if (rgb) {
             this.r = rgb.r;
             this.g = rgb.g;

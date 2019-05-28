@@ -11,12 +11,11 @@ interface ISettings {
 interface IState {
     rate?: number;
     resolution?: number;
-    resumeToggle ?: string;
+    resumeToggle?: string;
     generation?: number;
 }
 
 class Settings extends React.Component<ISettings> {
-
     public state: IState = {
         generation: 1,
         resumeToggle: 'resume'
@@ -31,13 +30,14 @@ class Settings extends React.Component<ISettings> {
     }
 
     public setGenerationChange(): void {
-        this.props.gameOfLife.rules.producers.generation$
-            .subscribe(generation => {
+        this.props.gameOfLife.rules.producers.generation$.subscribe(
+            generation => {
                 this.setState({generation});
-            });
+            }
+        );
     }
 
-    public onResolutionChange(event) : void {
+    public onResolutionChange(event): void {
         event.preventDefault();
         const {value} = event.currentTarget;
 
@@ -106,13 +106,15 @@ class Settings extends React.Component<ISettings> {
                         type="range"
                         min="10"
                         max="500"
-                        onChange={this.onRateChange.bind(this)} />
+                        onChange={this.onRateChange.bind(this)}
+                    />
                     <div>Rate: {this.state.rate}ms</div>
                 </div>
 
                 <button
                     className={styles.button}
-                    onClick={this.onResumeToggle.bind(this)}>
+                    onClick={this.onResumeToggle.bind(this)}
+                >
                     {this.state.resumeToggle}
                 </button>
             </div>

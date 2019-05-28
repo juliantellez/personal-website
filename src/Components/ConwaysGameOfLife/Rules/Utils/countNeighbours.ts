@@ -6,15 +6,14 @@ const countNeighbours = (
     row: number,
     columns: number,
     rows: number
-    ): [number, Cell[]] => {
+): [number, Cell[]] => {
     let sum = 0;
     const neighbours: Cell[] = [];
 
     for (let adjacentColumn = -1; adjacentColumn < 2; adjacentColumn++) {
         for (let adjacentRow = -1; adjacentRow < 2; adjacentRow++) {
             // Account for edges
-            const nextColumn =
-                (adjacentColumn + column + columns) % columns;
+            const nextColumn = (adjacentColumn + column + columns) % columns;
             const nextRow = (adjacentRow + row + rows) % rows;
 
             if (prevGrid[nextColumn] && prevGrid[nextColumn][nextRow]) {

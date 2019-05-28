@@ -12,12 +12,16 @@ type GridType = Cell[][];
 
 const createGridStream = (
     gameOfLife: GameOfLife
-    ): Observable<[GridType, number[]]> =>
-    createTimerStream(gameOfLife)
-        .pipe(
-            startWith(randomGrid(gameOfLife.rules.getDimensions())),
-            scan((prevGrid: GridType) => createNextGrid(prevGrid, gameOfLife.rules.getDimensions())),
-            map((nextGrid: GridType) => [nextGrid, gameOfLife.rules.getDimensions()])
-        );
+): Observable<[GridType, number[]]> =>
+    createTimerStream(gameOfLife).pipe(
+        startWith(randomGrid(gameOfLife.rules.getDimensions())),
+        scan((prevGrid: GridType) =>
+            createNextGrid(prevGrid, gameOfLife.rules.getDimensions())
+        ),
+        map((nextGrid: GridType) => [
+            nextGrid,
+            gameOfLife.rules.getDimensions()
+        ])
+    );
 
 export default createGridStream;

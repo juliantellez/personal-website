@@ -22,7 +22,13 @@ const createNextGrid = (prevGrid: Cell[][], dimensions: number[]) => {
 
             if (prevGrid && prevGrid[column] && prevGrid[column][row]) {
                 // Count live neighbours
-                const [neighboursCount, neighbours] = countNeighbours(prevGrid, column, row, columns, rows);
+                const [neighboursCount, neighbours] = countNeighbours(
+                    prevGrid,
+                    column,
+                    row,
+                    columns,
+                    rows
+                );
 
                 const prevCell = prevGrid[column][row];
                 const prevStatus = prevCell.status;
@@ -38,36 +44,62 @@ const createNextGrid = (prevGrid: Cell[][], dimensions: number[]) => {
                 } else if (prevStatus && neighboursCount > 3) {
                     nextGrid[column][row] = new Cell(0);
                 } else {
-                    const averageColour = (currentNeighbours: Cell[]): Colour => {
+                    const averageColour = (
+                        currentNeighbours: Cell[]
+                    ): Colour => {
                         return currentNeighbours.reduce((acc, next) => {
                             return new Colour({
-                                r: acc.r + (next.colour.r / currentNeighbours.length),
-                                g: acc.g + (next.colour.g / currentNeighbours.length),
-                                b: acc.b + (next.colour.b / currentNeighbours.length),
-                                a: acc.a + (next.colour.a / currentNeighbours.length)
+                                r:
+                                    acc.r +
+                                    next.colour.r / currentNeighbours.length,
+                                g:
+                                    acc.g +
+                                    next.colour.g / currentNeighbours.length,
+                                b:
+                                    acc.b +
+                                    next.colour.b / currentNeighbours.length,
+                                a:
+                                    acc.a +
+                                    next.colour.a / currentNeighbours.length
                             });
                         }, new Colour({r: 0, g: 0, b: 0, a: 0}));
                     };
 
                     const randomBellCurve = () => {
-                        return (Math.random() + Math.random() +
-                                Math.random() + Math.random() +
-                                Math.random() + Math.random() - 3) / 3;
+                        return (
+                            (Math.random() +
+                                Math.random() +
+                                Math.random() +
+                                Math.random() +
+                                Math.random() +
+                                Math.random() -
+                                3) /
+                            3
+                        );
                     };
 
                     const mutateColour = (colour: Colour) => {
                         const mutationFactor = 0.2;
 
                         return new Colour({
-                            r: colour.r * (1 + (randomBellCurve() * mutationFactor)),
-                            g: colour.g * (1 + (randomBellCurve() * mutationFactor)),
-                            b: colour.b * (1 + (randomBellCurve() * mutationFactor)),
+                            r:
+                                colour.r *
+                                (1 + randomBellCurve() * mutationFactor),
+                            g:
+                                colour.g *
+                                (1 + randomBellCurve() * mutationFactor),
+                            b:
+                                colour.b *
+                                (1 + randomBellCurve() * mutationFactor),
                             a: 255
                         });
                     };
 
                     const nextColour = mutateColour(averageColour(neighbours));
-                    nextGrid[column][row] = new Cell(prevCell.status, nextColour);
+                    nextGrid[column][row] = new Cell(
+                        prevCell.status,
+                        nextColour
+                    );
                 }
             }
         }

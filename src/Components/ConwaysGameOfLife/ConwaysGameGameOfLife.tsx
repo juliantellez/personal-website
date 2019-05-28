@@ -4,11 +4,10 @@ import GameOfLife from './GameOfLife';
 import Settings from './Settings/Settings';
 
 interface IState {
-    gameOfLife ?: GameOfLife;
+    gameOfLife?: GameOfLife;
 }
 
 class ConwaysGameOfLife extends React.Component {
-
     public state: IState = {};
     private containerRef: HTMLCanvasElement;
     private gameOfLife: GameOfLife;
@@ -27,7 +26,9 @@ class ConwaysGameOfLife extends React.Component {
         return (
             <React.Fragment>
                 <canvas ref={this.setContainerRef} />
-                {this.state.gameOfLife && <Settings gameOfLife={this.state.gameOfLife} />}
+                {this.state.gameOfLife && (
+                    <Settings gameOfLife={this.state.gameOfLife} />
+                )}
             </React.Fragment>
         );
     }

@@ -8,14 +8,10 @@ import subscribeToInteractionStream from '../Ui/Subscription/subscribeToInteract
 import createGridStream from './Streams/createGridStream';
 
 const connectSubscriptions = (gameOfLife: GameOfLife): Subscription[] => {
-    const resolutionAndResize$ = gameOfLife.ui.producers.resolution$
-        .pipe(
-            merge(
-                gameOfLife.ui.producers.resize$
-                    .pipe(mapTo(void 0))
-            ),
-            scan((prev, current) => current || prev)
-        );
+    const resolutionAndResize$ = gameOfLife.ui.producers.resolution$.pipe(
+        merge(gameOfLife.ui.producers.resize$.pipe(mapTo(void 0))),
+        scan((prev, current) => current || prev)
+    );
 
     return [
         /**
@@ -34,26 +30,25 @@ const connectSubscriptions = (gameOfLife: GameOfLife): Subscription[] => {
          * Remove gesturestart for multitouch
          */
         fromEvent(gameOfLife.ui.canvas, 'gesturestart')
-            .pipe(
-                map((event) => event.preventDefault())
-            )
+            .pipe(map(event => event.preventDefault()))
             .subscribe(),
 
-        resolutionAndResize$
-            .subscribe(resolution => {
-                const {width, height} = gameOfLife.ui.canvas;
-                const columns = Math.ceil(width / resolution);
-                const rows = Math.ceil(height / resolution);
+        resolutionAndResize$.subscribe(resolution => {
+            const {width, height} = gameOfLife.ui.canvas;
+            const columns = Math.ceil(width / resolution);
+            const rows = Math.ceil(height / resolution);
 
-                gameOfLife.rules.setDimensions(columns, rows);
-            }),
+            gameOfLife.rules.setDimensions(columns, rows);
+        }),
 
-        createGridStream(gameOfLife)
-            .subscribe(([grid, dimensions]) => {
-                gameOfLife.rules.setGrid(grid);
-                gameOfLife.rules.setGeneration(gameOfLife.rules.generation + 1);
-                gameOfLife.ui.draw.bind(gameOfLife.ui)(gameOfLife.rules.grid, dimensions);
-            })
+        createGridStream(gameOfLife).subscribe(([grid, dimensions]) => {
+            gameOfLife.rules.setGrid(grid);
+            gameOfLife.rules.setGeneration(gameOfLife.rules.generation + 1);
+            gameOfLife.ui.draw.bind(gameOfLife.ui)(
+                gameOfLife.rules.grid,
+                dimensions
+            );
+        })
     ];
 };
 

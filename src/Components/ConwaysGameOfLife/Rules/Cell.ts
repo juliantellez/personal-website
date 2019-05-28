@@ -8,14 +8,14 @@ class Cell {
     public status: number;
     public colour: Colour;
 
-    constructor(status: number, colour ?: Colour) {
+    constructor(status: number, colour?: Colour) {
         this.nextState(status, colour);
     }
 
     /**
      * addState
      */
-    public nextState(status: number, colour ?: Colour): void {
+    public nextState(status: number, colour?: Colour): void {
         this.status = status;
         this.colour = colour || new Colour();
     }
