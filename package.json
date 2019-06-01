@@ -7,12 +7,12 @@
     "types:css": "rm -rf **/*.css.d.ts && tcm src --camelCase",
     "types:css:watch": "npm run types:css -- --watch",
     "dev": "npm run types:css | sh ./scripts/dev.sh",
-    "build": "sh ./scripts/build.sh",
+    "build": "npm run types:css && sh ./scripts/build.sh",
     "build:analyze": "npm run build -- --analyze",
     "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' '**/*.{ts,tsx}' --exclude './**/*.d.ts'",
     "lint:ts:fix": "npm run lint:ts -- --fix",
     "prettier": "prettier --config ./config/prettier/.prettierrc --write '**/*.{ts,tsx,css}'",
-    "prettier:check": "prettier --config ./config/prettier/.prettierrc  --list-different '**/*.{ts,tsx,css}'"
+    "prettier:check": "prettier --config ./config/prettier/.prettierrc  --list-different '**/*.{ts,tsx,css}' --ignore-path ./config/prettier/.prettierignore"
   },
   "husky": {
     "hooks": {
