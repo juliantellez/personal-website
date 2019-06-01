@@ -19,13 +19,10 @@ const createWebpackConfig = (args: any): Configuration => {
         },
         output: {
             filename: '[name].js',
-            path: PATH_BUILD,
-            pathinfo: false
+            path: PATH_BUILD
         },
         devtool: 'source-map',
         optimization: {
-            removeAvailableModules: false,
-            removeEmptyChunks: false,
             splitChunks: {
                 chunks: 'initial',
                 cacheGroups: {
