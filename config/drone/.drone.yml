@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: terraform
+name: front-end
 
 steps:
 - name: install dependencies

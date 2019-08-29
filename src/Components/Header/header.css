@@ -1,0 +1,19 @@
+@import '../../Shared/Styles/colors';
+
+.header {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--color-gray-medium);
+    background-color: var(--color-white);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-element {
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--color-black);
+}
