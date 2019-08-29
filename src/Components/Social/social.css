@@ -1,0 +1,19 @@
+@import '../../Shared/Styles/colors';
+
+.list {
+    display: flex;
+}
+
+.list-element {
+    list-style-type: none;
+}
+
+.list-element svg {
+    height: 20px;
+    width: 20px;
+    margin: 5px 10px;
+}
+
+.list-element svg path {
+    fill: var(--color-black);
+}

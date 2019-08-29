@@ -1,0 +1,14 @@
+@import '../../Shared/Styles/colors';
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 15px;
+    right: 0;
+}
+
+.footer-copyrights {
+    color: var(--color-gray-dark);
+    font-size: 16px;
+    pointer-events: none;
+}

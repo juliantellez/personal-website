@@ -6,7 +6,7 @@
   "scripts": {
     "types:css": "rm -rf **/*.css.d.ts && tcm src --camelCase",
     "types:css:watch": "npm run types:css -- --watch",
-    "dev": "npm run types:css | sh ./scripts/dev.sh",
+    "dev": "npm run types:css:watch | sh ./scripts/dev.sh",
     "build": "npm run types:css && sh ./scripts/build.sh",
     "build:analyze": "npm run build -- --analyze",
     "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' '**/*.{ts,tsx}' --exclude './**/*.d.ts'",
