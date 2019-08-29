@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import * as styles from './header.css'
 import Social from '../Social';
 
+import * as styles from './header.css';
 
 const Header = () => {
     return (
@@ -14,7 +14,7 @@ const Header = () => {
                 <Social />
             </nav>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

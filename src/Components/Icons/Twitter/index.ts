@@ -1,3 +1,3 @@
-import Twitter from './Twitter'
+import Twitter from './Twitter';
 
 export default Twitter;

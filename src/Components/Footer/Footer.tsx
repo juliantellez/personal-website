@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import * as styles from './footer.css'
+import * as styles from './footer.css';
 
 const Footer = () => {
-    const getYear = () => new Date().getFullYear()
+    const getYear = () => new Date().getFullYear();
 
     return (
         <footer className={styles.footer}>
@@ -11,7 +11,7 @@ const Footer = () => {
                 Julian Tellez © {getYear()}
             </span>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;

@@ -1,3 +1,3 @@
-import Github from './Github'
+import Github from './Github';
 
 export default Github;
