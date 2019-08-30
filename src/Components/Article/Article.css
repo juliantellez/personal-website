@@ -1,0 +1,75 @@
+@import '../../Shared/Styles/colors';
+
+.article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-gray-medium);
+    margin: 20px;
+
+
+    min-width: 300px;
+    min-height: 300px;
+
+    background-color: var(--color-white);
+}
+
+.article-hero {
+    display: block;
+    width: 300px;
+    height: 300px;
+
+
+    background-image: url(https://miro.medium.com/max/8512/0*kbFW_oMK_p_EP4jH);
+    background-color: var(--color-gray-light);
+    background-size: cover;
+}
+
+@media (min-width: 680px) {
+    .article {
+        flex-direction: row;
+        min-width: 500px;
+        min-height: 300px;
+    }
+
+    .article-hero {
+        width: 250px;
+        height: 300px;
+    }
+}
+
+.article-content {
+    padding: 13px 20px;
+    max-width: 250px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.article-content-title {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.article-content-metadata {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--color-gray-dark);
+}
+
+.article-content-description {
+    word-wrap: break-word;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 5px 0;
+    line-height: 25px;
+    position: relative;
+}
+
+.article-content-description:before{
+    content:'';
+    width:100%;
+    height: 222px;
+    position:absolute;
+    left:0;
+    top:0;
+    background:linear-gradient(transparent 150px, white);
+}

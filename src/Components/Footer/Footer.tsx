@@ -7,9 +7,9 @@ const Footer = () => {
 
     return (
         <footer className={styles.footer}>
-            <span className={styles.footerCopyrights}>
+            <div className={styles.footerCopyrights}>
                 Julian Tellez © {getYear()}
-            </span>
+            </div>
         </footer>
     );
 };
