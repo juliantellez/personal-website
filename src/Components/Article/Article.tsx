@@ -31,7 +31,7 @@ const Article = (props: IProps) => {
                     {props.metadata}
                 </div>
                 <div className={styles.articleContentDescription}>
-                    {props.description}
+                    <p>{props.description}</p>
                 </div>
             </div>
         </article>
