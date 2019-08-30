@@ -64,8 +64,8 @@
     display: -webkit-box;
     -webkit-line-clamp: 9;
     -webkit-box-orient: vertical;
-  }
+}
 
-  .article-content-description p {
-      font-size: 17px;
-  }
+.article-content-description p {
+    font-size: 17px;
+}
