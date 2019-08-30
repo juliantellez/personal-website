@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Anchor = (props) => (
+const Anchor = props => (
     <a
         className={props.className}
         style={props.style}
@@ -9,6 +9,6 @@ const Anchor = (props) => (
     >
         {props.children}
     </a>
-)
+);
 
 export default Anchor;

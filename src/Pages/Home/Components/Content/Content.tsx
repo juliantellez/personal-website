@@ -1,9 +1,11 @@
+// tslint:disable:max-line-length
+
 import * as React from 'react';
 
 import Article from '../../../../Components/Article';
-
-import * as styles from './Content.css'
 import RoutePath from '../../../../Components/Root/Constants/RoutePath';
+
+import * as styles from './Content.css';
 
 const Content = () => {
     return (
@@ -52,7 +54,7 @@ const Content = () => {
                 link="https://www.academia.edu/3765552/Generative_Footsteps_Sounds_for_Film_Postproduction"
             />
         </div>
-    )
-}
+    );
+};
 
 export default Content;

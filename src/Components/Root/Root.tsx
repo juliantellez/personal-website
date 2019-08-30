@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Route, Switch } from 'react-router';
+import {Route, Switch} from 'react-router';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 import Home from '../../Pages/Home/Home';
 import '../../Shared/Styles/global.css';
-
-import * as styles from './root.css';
 import ConwaysGameOfLife from '../ConwaysGameOfLife/ConwaysGameGameOfLife';
-import RoutePath from './Constants/RoutePath';
 
+import RoutePath from './Constants/RoutePath';
+import * as styles from './root.css';
 
 const AppRoutes = () => (
     <div className={styles.main}>
@@ -21,7 +20,7 @@ const AppRoutes = () => (
             </Route>
         </Switch>
     </div>
-)
+);
 
 const Root = () => (
     <Router>

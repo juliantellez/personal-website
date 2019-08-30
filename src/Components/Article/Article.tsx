@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
-import * as styles from './Article.css'
 import Anchor from '../Anchor';
+
+import * as styles from './Article.css';
 
 interface IProps {
     title: string;
@@ -10,7 +11,7 @@ interface IProps {
     imageUrl: string;
     description: string;
     link?: string;
-    to?: string
+    to?: string;
 }
 
 const Article = (props: IProps) => {
@@ -25,9 +26,7 @@ const Article = (props: IProps) => {
                 to={props.to}
             />
             <div className={styles.articleContent}>
-                <div className={styles.articleContentTitle}>
-                    {props.title}
-                </div>
+                <div className={styles.articleContentTitle}>{props.title}</div>
                 <div className={styles.articleContentMetadata}>
                     {props.metadata}
                 </div>
