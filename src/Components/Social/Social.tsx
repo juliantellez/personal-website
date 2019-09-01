@@ -6,12 +6,14 @@ import LinkedIn from '../Icons/LinkedIn';
 import Twitter from '../Icons/Twitter';
 
 import * as styles from './social.css';
+import Mail from '../Icons/Mail';
 
 const urls = {
     twitter: 'https://twitter.com/_juliantellez',
     github: 'https://github.com/juliantellez',
     linkedin: 'https://www.linkedin.com/in/juliantellez',
-    instagram: 'https://www.instagram.com/_juliantellez'
+    instagram: 'https://www.instagram.com/_juliantellez',
+    mail:  'mailto:juliantellezmendez@gmail.com?subject=[ Source: juliantellez.com ]'
 };
 
 const Social = () => {
@@ -35,6 +37,11 @@ const Social = () => {
             <li className={styles.listElement}>
                 <a href={urls.github} target="_blank">
                     <Github />
+                </a>
+            </li>
+            <li className={styles.listElement}>
+                <a href={urls.mail}>
+                    <Mail />
                 </a>
             </li>
         </ul>
