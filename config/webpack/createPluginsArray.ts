@@ -16,7 +16,7 @@ const createWebpackPluginsArray = (envArgs: EnvironmentArgs): Plugin[] => {
         new CopyWebpackPlugin([
             {
                 from: path.join(PATH_ROOT, 'assets', 'fonts'),
-                to: path.join(PATH_ROOT, 'dist', 'assets', 'fonts'),
+                to: path.join(PATH_ROOT, 'dist', 'assets', 'fonts')
             }
         ]),
         new EnvironmentPlugin({
