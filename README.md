@@ -4,3 +4,6 @@
 
 This repository provisions [juliantellez.com](https://juliantellez.com). A space dedicated to doodles and ideas.
 
+## Fonts
+
+- Downloaded from [Helvetica Neue](https://downloadhelvetica.com/helvetica-neue-download-free/)

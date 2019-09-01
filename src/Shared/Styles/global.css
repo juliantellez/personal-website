@@ -1,15 +1,14 @@
+@import './fonts';
 @import './colors';
-
-html,
-button,
-input {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
 *,
 *::before,
 *::after {
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 22px;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
