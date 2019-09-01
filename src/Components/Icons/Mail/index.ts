@@ -1,3 +1,3 @@
-import Mail from './Mail'
+import Mail from './Mail';
 
-export default Mail
+export default Mail;
