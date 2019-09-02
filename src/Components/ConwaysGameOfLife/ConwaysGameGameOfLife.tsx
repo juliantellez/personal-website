@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import GameOfLife from './GameOfLife';
 import Settings from './Settings/Settings';
+import Body from '../Body/Body';
 
 interface IState {
     gameOfLife?: GameOfLife;
@@ -24,12 +25,12 @@ class ConwaysGameOfLife extends React.Component {
 
     public render(): React.ReactElement {
         return (
-            <React.Fragment>
+            <Body>
                 <canvas ref={this.setContainerRef} />
                 {this.state.gameOfLife && (
                     <Settings gameOfLife={this.state.gameOfLife} />
                 )}
-            </React.Fragment>
+            </Body>
         );
     }
 

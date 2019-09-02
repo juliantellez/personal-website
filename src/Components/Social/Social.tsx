@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Link} from 'react-router-dom';
 
 import Github from '../Icons/Github';
 import Instagram from '../Icons/Instagram';
@@ -7,6 +8,8 @@ import Mail from '../Icons/Mail';
 import Twitter from '../Icons/Twitter';
 
 import * as styles from './social.css';
+import Blog from '../Icons/Blog';
+import RoutePath from '../../Routes/Constants/RoutePath';
 
 const urls = {
     twitter: 'https://twitter.com/_juliantellez',

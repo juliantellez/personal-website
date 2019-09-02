@@ -1,3 +1,4 @@
+import * as webpack from 'webpack';
 import * as CopyWebpackPlugin from 'copy-webpack-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
@@ -30,6 +31,12 @@ const createWebpackPluginsArray = (envArgs: EnvironmentArgs): Plugin[] => {
                 openAnalyzer: true
             })
         );
+    }
+
+    if(!envArgs.isProduction()) {
+        plugins.push(
+            new webpack.HotModuleReplacementPlugin()
+        )
     }
 
     return plugins;

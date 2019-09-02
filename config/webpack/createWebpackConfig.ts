@@ -5,23 +5,27 @@ import createWebpackPluginsArray from './createPluginsArray';
 import EnvironmentArgs from './EnvironmentArgs';
 import cssRule from './rules/css';
 import typescriptRule from './rules/typescript';
+import Environment from './Constants/Environment';
 
 const PATH_SRC = path.resolve(__dirname, '..', '..', 'src', 'main');
 const PATH_BUILD = path.resolve(__dirname, '..', '..', 'dist');
 
-const createWebpackConfig = (args: any): Configuration => {
+const createWebpackConfig = (args: any = {}): Configuration => {
     const envArgs = new EnvironmentArgs(args);
 
     return {
-        mode: envArgs.NODE_ENV,
-        entry: {
-            main: PATH_SRC
-        },
+        mode: envArgs.isProduction() ? Environment.PRODUCTION : Environment.DEVELOPMENT,
+        entry: envArgs.isProduction() ? PATH_SRC : [
+            PATH_SRC,
+            'webpack-hot-middleware/client?reload=true'
+        ],
         output: {
             filename: '[name].js',
-            path: PATH_BUILD
+            path: PATH_BUILD,
+            publicPath: '/'
         },
-        devtool: 'source-map',
+        devtool: envArgs.isProduction() ? 'source-map' : 'cheap-eval-source-map',
+        cache: envArgs.isProduction() ? false : true,
         optimization: {
             splitChunks: {
                 chunks: 'initial',
