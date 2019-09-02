@@ -12,8 +12,7 @@ const config = {
     root: ROOT,
     assetPath: ASSETS_PATH,
     distPath: DIST_PATH,
-    endpoints: {
-    }
+    endpoints: {}
 };
 
 export default config;

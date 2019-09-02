@@ -1,7 +1,7 @@
-import * as webpack from 'webpack';
 import * as CopyWebpackPlugin from 'copy-webpack-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
+import * as webpack from 'webpack';
 import {EnvironmentPlugin, Plugin} from 'webpack';
 import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer';
 
@@ -33,10 +33,8 @@ const createWebpackPluginsArray = (envArgs: EnvironmentArgs): Plugin[] => {
         );
     }
 
-    if(!envArgs.isProduction()) {
-        plugins.push(
-            new webpack.HotModuleReplacementPlugin()
-        )
+    if (!envArgs.isProduction()) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
     }
 
     return plugins;

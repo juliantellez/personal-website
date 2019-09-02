@@ -1,4 +1,4 @@
-import Environment from "./Constants/Environment";
+import Environment from './Constants/Environment';
 
 class EnvironmentArgs {
     public NODE_ENV: Environment = Environment.DEVELOPMENT;
@@ -11,8 +11,8 @@ class EnvironmentArgs {
         }
     }
 
-    isProduction (): boolean {
-        return this.NODE_ENV === Environment.PRODUCTION
+    public isProduction(): boolean {
+        return this.NODE_ENV === Environment.PRODUCTION;
     }
 }
 

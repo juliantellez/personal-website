@@ -6,7 +6,7 @@ import * as webpack from 'webpack';
 import * as createWebpackMiddleware from 'webpack-dev-middleware';
 import * as webpackHotMiddleware from 'webpack-hot-middleware';
 
-import config from './config'
+import config from './config';
 
 import createWebpackConfig from '../config/webpack/createWebpackConfig';
 
@@ -37,7 +37,5 @@ server.get('/*', (_, res) => {
 
 server.listen(config.port, config.ip, () => {
     // tslint:disable-next-line
-    console.log(
-        `[DEV SERVER] listening on localhost:${config.port}`
-    );
+    console.log(`[DEV SERVER] listening on localhost:${config.port}`);
 });
