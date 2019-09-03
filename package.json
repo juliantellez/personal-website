@@ -4,9 +4,10 @@
   "description": "personal website",
   "main": "dist/main.js",
   "scripts": {
+    "start": "TS_NODE_PROJECT=config/typescript/tsconfig.node.json ts-node -r tsconfig-paths/register ./server/Server.ts",
     "types:css": "rm -rf **/*.css.d.ts && tcm src --camelCase",
     "types:css:watch": "npm run types:css -- --watch",
-    "dev": "npm run types:css:watch | sh ./scripts/dev.sh",
+    "dev": "npm run types:css:watch | npm run start",
     "build": "npm run types:css && sh ./scripts/build.sh",
     "build:analyze": "npm run build -- --analyze",
     "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' '**/*.{ts,tsx}' --exclude './**/*.d.ts'",
@@ -27,11 +28,15 @@
     "@types/react-dom": "^16.8.4",
     "@types/webpack": "^4.4.31",
     "@types/webpack-bundle-analyzer": "^2.13.1",
+    "body-parser": "^1.19.0",
     "copy-webpack-plugin": "^5.0.3",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^2.2.0",
+    "morgan": "^1.9.1",
     "postcss-css-variables": "^0.12.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
@@ -49,7 +54,9 @@
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1"
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
     "react-router": "^5.0.1",

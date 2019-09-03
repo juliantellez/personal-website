@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 import Article from '../../../../Components/Article';
-import RoutePath from '../../../../Components/Root/Constants/RoutePath';
+import RoutePath from '../../../../Routes/Constants/RoutePath';
 
 import * as styles from './Content.css';
 
