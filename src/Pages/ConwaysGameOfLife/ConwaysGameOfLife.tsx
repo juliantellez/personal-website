@@ -1,8 +1,9 @@
 import * as React from 'react';
 
+import Body from '../../Components/Body/Body';
+
 import GameOfLife from './GameOfLife';
 import Settings from './Settings/Settings';
-import Body from '../Body/Body';
 
 interface IState {
     gameOfLife?: GameOfLife;
