@@ -6,9 +6,9 @@ import * as webpack from 'webpack';
 import * as createWebpackMiddleware from 'webpack-dev-middleware';
 import * as webpackHotMiddleware from 'webpack-hot-middleware';
 
-import config from './config';
-
 import createWebpackConfig from '../config/webpack/createWebpackConfig';
+
+import config from './config';
 
 const webpackConfig: webpack.Configuration = createWebpackConfig();
 
