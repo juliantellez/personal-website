@@ -2,12 +2,12 @@ import * as React from 'react';
 import {Link} from 'react-router-dom';
 
 import RoutePath from '../../Routes/Constants/RoutePath';
-import Blog from '../Icons/Blog';
-import Github from '../Icons/Github';
-import Instagram from '../Icons/Instagram';
-import LinkedIn from '../Icons/LinkedIn';
-import Mail from '../Icons/Mail';
-import Twitter from '../Icons/Twitter';
+import IconBlog from '../Icons/Blog';
+import IconGithub from '../Icons/Github';
+import IconInstagram from '../Icons/Instagram';
+import IconLinkedIn from '../Icons/LinkedIn';
+import IconMail from '../Icons/Mail';
+import IconTwitter from '../Icons/Twitter';
 
 import * as styles from './social.css';
 
@@ -24,28 +24,33 @@ const Social = () => {
     return (
         <ul className={styles.list}>
             <li className={styles.listElement}>
+                <Link to={RoutePath.BLOG_POST_LAMBDAS}>
+                    <IconBlog />
+                </Link>
+            </li>
+            <li className={styles.listElement}>
                 <a href={urls.twitter} target="_blank">
-                    <Twitter />
+                    <IconTwitter />
                 </a>
             </li>
             <li className={styles.listElement}>
                 <a href={urls.instagram} target="_blank">
-                    <Instagram />
+                    <IconInstagram />
                 </a>
             </li>
             <li className={styles.listElement}>
                 <a href={urls.linkedin} target="_blank">
-                    <LinkedIn />
+                    <IconLinkedIn />
                 </a>
             </li>
             <li className={styles.listElement}>
                 <a href={urls.github} target="_blank">
-                    <Github />
+                    <IconGithub />
                 </a>
             </li>
             <li className={styles.listElement}>
                 <a href={urls.mail}>
-                    <Mail />
+                    <IconMail />
                 </a>
             </li>
         </ul>
