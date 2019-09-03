@@ -4,10 +4,10 @@
 *,
 *::before,
 *::after {
-    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 22px;
+    line-height: 24px;
 
     margin: 0;
     padding: 0;
