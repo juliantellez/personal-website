@@ -6,7 +6,7 @@ This repository provisions [juliantellez.com](https://juliantellez.com). A space
 
 ## Fonts
 
-- Downloaded from [Helvetica Neue](https://downloadhelvetica.com/helvetica-neue-download-free/).
+- Downloaded from [Google fonts](https://fonts.google.com/specimen/Roboto).
 
 ## SVG icons
 

@@ -49,12 +49,10 @@
 
 .article-content-title {
     font-weight: 600;
-    margin-bottom: 3px;
 }
 
 .article-content-metadata {
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 12px;
     color: var(--color-gray-dark);
     margin-bottom: 3px;
 }
@@ -63,7 +61,7 @@
     overflow: hidden;
 
     display: -webkit-box;
-    -webkit-line-clamp: 8;
+    -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
 }
 
