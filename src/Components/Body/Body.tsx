@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import '../../Shared/Styles/global.css';
+import '../../Shared/Styles/global.scss';
 
-import * as styles from './body.css';
+import * as styles from './body.scss';
 
 interface IBodyProps {
     children?: JSX.Element[];

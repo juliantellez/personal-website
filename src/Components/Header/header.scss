@@ -1,0 +1,29 @@
+@import '../../Shared/Styles/colors';
+@import '../../Shared/Styles/breakpoints';
+
+.header {
+    padding: 10px 15px;
+    border-bottom: 1px solid $color-gray-medium;
+    background-color: $color-white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-element {
+    font-family: monospace;
+    font-weight: 600;
+    color: $color-black;
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .nav {
+        flex-direction: column;
+    }
+    .nav-element {
+        margin-bottom: 5px;
+    }
+}

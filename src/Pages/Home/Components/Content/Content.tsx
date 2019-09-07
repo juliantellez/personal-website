@@ -5,7 +5,7 @@ import * as React from 'react';
 import Article from '../../../../Components/Article';
 import RoutePath from '../../../../Routes/Constants/RoutePath';
 
-import * as styles from './Content.css';
+import * as styles from './Content.scss';
 
 const Content = () => {
     return (

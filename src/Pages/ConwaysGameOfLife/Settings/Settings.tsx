@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import GameOfLife from '../GameOfLife';
 
-import * as styles from './settings.css';
+import * as styles from './settings.scss';
 
 interface ISettings {
     gameOfLife: GameOfLife;

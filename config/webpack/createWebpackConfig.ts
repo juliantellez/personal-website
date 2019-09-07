@@ -21,6 +21,7 @@ const createWebpackConfig = (args: any = {}): Configuration => {
             ? PATH_SRC
             : [PATH_SRC, 'webpack-hot-middleware/client?reload=true'],
         output: {
+            chunkFilename: 'chunk.[name].[contenthash].js',
             filename: '[name].js',
             path: PATH_BUILD,
             publicPath: '/'
