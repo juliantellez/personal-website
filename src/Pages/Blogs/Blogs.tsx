@@ -1,12 +1,14 @@
+// tslint:disable:max-line-length
+
 import * as React from 'react';
 
+import Article from '../../Components/Article';
 import Body from '../../Components/Body/Body';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
-import Article from '../../Components/Article';
 import RoutePath from '../../Routes/Constants/RoutePath';
 
-import * as styles from './Blogs.scss'
+import * as styles from './Blogs.scss';
 
 const BlogsPage = () => {
     return (

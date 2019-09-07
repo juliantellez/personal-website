@@ -14,7 +14,7 @@ const Routes = () => {
         Promise.resolve(true)
     );
 
-    const Blogs= lazyImport(PagesPath.BLOGS, PagesPath.BLOGS, () =>
+    const Blogs = lazyImport(PagesPath.BLOGS, PagesPath.BLOGS, () =>
         Promise.resolve(true)
     );
 
