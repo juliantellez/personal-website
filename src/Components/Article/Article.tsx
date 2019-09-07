@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import Anchor from '../Anchor';
 
-import * as styles from './Article.css';
+import * as styles from './Article.scss';
 
 interface IProps {
     title: string;

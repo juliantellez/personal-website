@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import RoutePath from '../../Routes/Constants/RoutePath';
 import Social from '../Social';
 
-import * as styles from './header.css';
+import * as styles from './header.scss';
 
 const Header = () => {
     return (

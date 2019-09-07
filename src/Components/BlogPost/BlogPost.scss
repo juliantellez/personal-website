@@ -1,0 +1,72 @@
+@import '../../Shared/Styles/colors';
+@import '../../Shared/Styles/breakpoints';
+
+.article {
+    margin: 2em auto;
+    max-width: 728px;
+}
+
+.article-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 0.5em;
+}
+
+.article-metadata {
+    font-size: 16px;
+    color: $color-gray-text;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 1em 0;
+    color: $color-gray-text;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-tag {
+    margin: 10px;
+    font-size: 16px;
+    background-color: #0000000d;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.article-figure {
+    margin: 2em 0;
+}
+
+.article-figure-image {
+    width: 100%;
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .article {
+        margin: 20px 10px;
+    }
+    
+    .article-title {
+        font-size: 23px;
+    }
+
+    .article-metadata {
+        font-size: 14px;
+    }
+
+    .article-tag {
+        margin: 5px;
+        font-size: 12px;
+        background-color: #0000000d;
+        padding: 5px 5px;
+        border-radius: 3px;
+    }
+
+    .article-figure {
+        margin: 15px 0;
+    }
+}

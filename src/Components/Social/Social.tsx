@@ -2,14 +2,13 @@ import * as React from 'react';
 import {Link} from 'react-router-dom';
 
 import RoutePath from '../../Routes/Constants/RoutePath';
-import IconBlog from '../Icons/Blog';
 import IconGithub from '../Icons/Github';
 import IconInstagram from '../Icons/Instagram';
 import IconLinkedIn from '../Icons/LinkedIn';
 import IconMail from '../Icons/Mail';
 import IconTwitter from '../Icons/Twitter';
 
-import * as styles from './social.css';
+import * as styles from './social.scss';
 
 const urls = {
     twitter: 'https://twitter.com/_juliantellez',
@@ -25,7 +24,7 @@ const Social = () => {
         <ul className={styles.list}>
             <li className={styles.listElement}>
                 <Link to={RoutePath.BLOG_POST_LAMBDAS}>
-                    <IconBlog />
+                    <span>Blog</span>
                 </Link>
             </li>
             <li className={styles.listElement}>
