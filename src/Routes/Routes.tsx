@@ -13,6 +13,11 @@ const Routes = () => {
     const Blog = lazyImport(PagesPath.BLOG, PagesPath.BLOG, () =>
         Promise.resolve(true)
     );
+
+    const Blogs= lazyImport(PagesPath.BLOGS, PagesPath.BLOGS, () =>
+        Promise.resolve(true)
+    );
+
     const GameOfLife = lazyImport(
         PagesPath.GAME_OF_LIFE,
         PagesPath.GAME_OF_LIFE,
@@ -24,6 +29,7 @@ const Routes = () => {
             <Switch>
                 <Route path={RoutePath.GAME_OF_LIFE} component={GameOfLife} />
                 <Route path={RoutePath.BLOG_ROUTE_PARAM} component={Blog} />
+                <Route path={RoutePath.BLOG} component={Blogs} />
                 <Route component={Home} />
             </Switch>
         </React.Suspense>

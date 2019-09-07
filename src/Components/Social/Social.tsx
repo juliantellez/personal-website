@@ -23,7 +23,7 @@ const Social = () => {
     return (
         <ul className={styles.list}>
             <li className={styles.listElement}>
-                <Link to={RoutePath.BLOG_POST_LAMBDAS}>
+                <Link to={RoutePath.BLOG}>
                     <span>Blog</span>
                 </Link>
             </li>
