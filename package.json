@@ -10,7 +10,7 @@
     "types:sass": "rm -rf **/*.scss.d.ts && tsm src --camelCase",
     "types:sass:watch": "npm run types:sass -- --watch",
     "dev": "npm run types:sass:watch | npm run start",
-    "build": "npm run types:css && sh ./scripts/build.sh",
+    "build": "npm run types:sass && sh ./scripts/build.sh",
     "build:analyze": "npm run build -- --analyze",
     "lint:ts": "tslint --project tsconfig.json -c './config/tslint/tslint.json' '**/*.{ts,tsx}' --exclude './**/*.d.ts'",
     "lint:ts:fix": "npm run lint:ts -- --fix",
