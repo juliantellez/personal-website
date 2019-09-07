@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 import IBlogPost from '../../../shared/Interfaces/IBlogPost';
+import BlogPostBody from '../BlogPostBody';
 
 import * as styles from './BlogPost.scss';
-import BlogPostBody from '../BlogPostBody';
 
 const BlogPost = (props: IBlogPost) => {
     return (

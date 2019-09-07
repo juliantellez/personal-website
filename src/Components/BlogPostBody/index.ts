@@ -1,3 +1,3 @@
-import BlogPostBody from './BlogPostBody'
+import BlogPostBody from './BlogPostBody';
 
 export default BlogPostBody;

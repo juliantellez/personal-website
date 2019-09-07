@@ -18,7 +18,7 @@ const postCss: Rule = {
             }
         },
         {
-          loader: 'postcss-loader',
+            loader: 'postcss-loader',
             options: {
                 sourceMap: true,
                 ident: 'postcss',
@@ -44,7 +44,7 @@ const sassCss: Rule = {
             }
         },
         {
-            loader: 'sass-loader',
+            loader: 'sass-loader'
         }
     ]
 };
@@ -58,14 +58,10 @@ const rawCss: Rule = {
     test: /\.css$/,
     resourceQuery: /^\?raw$/,
     use: ['style-loader', 'css-loader']
-}
+};
 
 const cssRule: Rule = {
-    oneOf: [
-        rawCss,
-        sassCss,
-        postCss
-    ]
-}
+    oneOf: [rawCss, sassCss, postCss]
+};
 
 export default cssRule;
