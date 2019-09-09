@@ -10,12 +10,12 @@
 }
 
 .list-element span {
-    color: $color-black;
+    color: var(--color);
     font-weight: 700;
     font-size: 12px;
     margin: 0 5px;
 
-    border: 1px solid black;
+    border: 1px solid var(--color);
     border-radius: 3px;
     padding: 2px 10px;
 }
@@ -27,5 +27,5 @@
 }
 
 .list-element svg path {
-    fill: $color-black;
+    fill: var(--color);
 }

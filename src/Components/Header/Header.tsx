@@ -5,6 +5,7 @@ import RoutePath from '../../Routes/Constants/RoutePath';
 import Social from '../Social';
 
 import * as styles from './header.scss';
+import Toggle from '../Toggle';
 
 const Header = () => {
     return (
@@ -14,6 +15,7 @@ const Header = () => {
                     Julian Tellez
                 </Link>
                 <Social />
+                <Toggle />
             </nav>
         </header>
     );

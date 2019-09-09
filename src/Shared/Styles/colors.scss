@@ -1,7 +1,26 @@
-$color-black: #1e2022;
+$color-black: #282c35;
+$color-black-light: #0000000d;
 $color-white: #fff;
 $color-gray: #fafafa;
 $color-gray-light: #f0f5f9;
 $color-gray-medium: #c9d6df;
 $color-gray-dark: #52616b;
 $color-gray-text: #0000008a;
+
+$theme-default: (
+  --background: $color-white,
+  --button: $color-black-light,
+  --color: $color-black,
+  --color-light: $color-gray-text,
+);
+
+$theme-dark: (
+  --background: $color-black,
+  --button: $color-gray-medium,
+  --color: $color-gray-medium,
+  --color-light: $color-gray-medium,
+);
+
+@function var($variable) {
+    @return unquote('var(' + $variable + ')');
+}
