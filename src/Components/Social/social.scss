@@ -1,7 +1,14 @@
 @import '../../Shared/Styles/colors';
+@import '../../Shared/Styles/breakpoints';
 
 .list {
     display: flex;
+}
+
+@media (min-width: $breakpoint-mobile) {
+    .list {
+        flex: 0 0 350px;
+    }
 }
 
 .list-element {
