@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom';
 
 import RoutePath from '../../Routes/Constants/RoutePath';
 import Social from '../Social';
+import Toggle from '../Toggle';
 
 import * as styles from './header.scss';
-import Toggle from '../Toggle';
 
 const Header = () => {
     return (
