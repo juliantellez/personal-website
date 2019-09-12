@@ -3,26 +3,26 @@ import * as React from 'react';
 import * as styles from './toggle.scss';
 
 class Toggle extends React.Component {
-    node = document.documentElement;
+    public node = document.documentElement;
 
-    state = {
+    public state = {
         checked: true
-    }
+    };
 
-    componentWillMount() {
+    public componentWillMount(): void {
         const currentTheme = this.node.getAttribute('data-theme');
         this.setState({
-            checked: currentTheme === 'dark' ? false : true,
-        })
+            checked: currentTheme === 'dark' ? false : true
+        });
     }
 
-    onClick = () => {
+    public onClick = () => {
         const currentTheme = this.node.getAttribute('data-theme');
         const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
         this.node.setAttribute('data-theme', nextTheme);
-    };
+    }
 
-    render() {
+    public render(): JSX.Element {
         return (
             <div>
                 <input

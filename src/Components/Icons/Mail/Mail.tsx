@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-import * as styles from './Mail.scss'
+import * as styles from './Mail.scss';
 
 const Mail = () => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.626 511.627">
