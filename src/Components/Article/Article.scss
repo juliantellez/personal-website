@@ -4,7 +4,8 @@
 .article {
     display: flex;
     flex-direction: column;
-    border: 1px solid $color-gray-medium;
+    color: var(--color);
+    border: 1px solid $color-gray-200;
     margin: 10px;
 
     max-width: 300px;
@@ -17,7 +18,7 @@
     max-width: 300px;
     min-height: 300px;
 
-    background-color: $color-gray-light;
+    background-color: $color-gray-100;
     background-size: cover;
 }
 
@@ -53,7 +54,7 @@
 
 .article-content-metadata {
     font-size: 12px;
-    color: $color-gray-dark;
+    color: $color-gray-300;
     margin-bottom: 3px;
 }
 

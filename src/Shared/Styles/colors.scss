@@ -1,24 +1,27 @@
-$color-black: #282c35;
-$color-black-light: #0000000d;
-$color-white: #fff;
-$color-gray: #fafafa;
-$color-gray-light: #f0f5f9;
-$color-gray-medium: #c9d6df;
-$color-gray-dark: #52616b;
-$color-gray-text: #0000008a;
+$color-white: #FFF;
+
+$color-black-100: #0000000d;
+$color-black-200: #0000008a;
+$color-black-300: #282c35;
+
+$color-gray-100: #f0f5f9;
+$color-gray-200: #c9d6df;
+$color-gray-300: #52616b;
 
 $theme-default: (
+  --background-100: $color-black-100,
   --background: $color-white,
-  --button: $color-black-light,
-  --color: $color-black,
-  --color-light: $color-gray-text,
+
+  --color-100: $color-black-200,
+  --color: $color-black-300,
 );
 
 $theme-dark: (
-  --background: $color-black,
-  --button: $color-gray-medium,
-  --color: $color-gray-medium,
-  --color-light: $color-gray-medium,
+  --background-100: $color-gray-200,
+  --background: $color-black-300,
+
+  --color: $color-gray-200,
+  --color-100: $color-gray-200,
 );
 
 @function var($variable) {

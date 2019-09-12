@@ -6,6 +6,7 @@
     font-weight: 400;
     line-height: 38px;
     text-align: justify;
+    color: var(--color);
 
     h1 {
         font-size: 40px;
@@ -24,7 +25,7 @@
 
     a {
         color: var(--color);
-        border-bottom: 1px solid $color-gray-dark;
+        border-bottom: 1px solid $color-gray-300;
     }
 
     ul, ol {

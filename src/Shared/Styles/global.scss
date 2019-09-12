@@ -22,7 +22,7 @@ body,
     height: 100%;
 }
 
-body {
+html {
     @each $variable, $value in $theme-default {
         #{$variable}: $value;
     }
@@ -30,7 +30,7 @@ body {
     transition: background .5s ease-in-out;
 }
 
-body[data-theme='dark']{
+html[data-theme='dark']{
     @each $variable, $value in $theme-dark {
         #{$variable}: $value;
     }

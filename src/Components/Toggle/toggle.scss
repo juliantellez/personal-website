@@ -1,19 +1,23 @@
+@import "../../Shared/Styles/colors";
+
+$size: 30px;
+
 .label { 
-    position : relative ;
+    position : relative;
     display : inline-block;
-    width : 40px;
-    height : 20px;
-    background-color: #eee;
+    width : $size;
+    height : calc(#{$size}/2);
+    background-color: $color-gray-200;
     border-radius: 20px;
     cursor: pointer;
 
     &:after {
         content: '';
         position: absolute;
-        width: 18px;
-        height: 18px;
+        width: 13px;
+        height: 13px;
         border-radius: 50%;
-        background-color: white;
+        background-color: $color-white;
         top: 1px;
         left: 1px;
         transition: all 0.3s;
@@ -25,8 +29,8 @@
 }
 
 .checkbox:checked + .label:after {
-    left : 21px; 
+    left : 16px;
 }
 .checkbox:checked + .label {
-    background-color: #7983ff;
+    background-color: $color-black-300;
 }
