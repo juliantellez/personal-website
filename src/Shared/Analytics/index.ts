@@ -5,7 +5,8 @@ class DataLayer {
 
     constructor() {
         if (!(window as any).dataLayer) {
-            console.error('(window as any).dataLayer');
+            // Sentry implementation will eventually replace this
+            console.error('Data Layer does not exist');
         }
 
         this.dataLayer = (window as any).dataLayer || [];
