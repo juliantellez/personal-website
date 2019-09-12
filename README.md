@@ -11,3 +11,8 @@ This repository provisions [juliantellez.com](https://juliantellez.com). A space
 ## SVG icons
 
 - Downloaded from [simpleicons](https://simpleicons.org/).
+
+## TAG Manager
+
+- Integration with Google Analytics using GTM Data Layer [see link](https://support.usabilla.com/hc/en-us/articles/360015738812-Integration-with-Google-Analytics-using-GTM-Data-Layer).
+

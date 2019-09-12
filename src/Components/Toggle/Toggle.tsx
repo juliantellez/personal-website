@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import analytics from '../../Shared/Analytics';
+import DataLayerEvents from '../../Shared/Analytics/Constants/DataLayerEvents';
+
 import * as styles from './toggle.scss';
 
 enum Theme {
@@ -21,6 +24,8 @@ const Toggle = () => {
                 ? Theme.LIGHT
                 : Theme.DARK;
         node.setAttribute(HTML_ATTRIBUTE_THEME, nextTheme);
+
+        analytics.push(DataLayerEvents.THEME, nextTheme);
     };
 
     return (
