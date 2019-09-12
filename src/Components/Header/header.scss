@@ -3,8 +3,7 @@
 
 .header {
     padding: 10px 15px;
-    border-bottom: 1px solid $color-gray-medium;
-    background-color: $color-white;
+    border-bottom: 1px solid $color-gray-200;
 }
 
 .nav {
@@ -16,7 +15,7 @@
 .nav-element {
     font-family: monospace;
     font-weight: 600;
-    color: $color-black;
+    color: var(--color);
 }
 
 @media (max-width: $breakpoint-mobile) {

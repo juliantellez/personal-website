@@ -3,6 +3,7 @@
 
 .article {
     margin: 2em auto;
+    padding: 0 20px;
     max-width: 728px;
 }
 
@@ -10,11 +11,12 @@
     text-align: center;
     font-size: 40px;
     margin-bottom: 0.5em;
+    color: var(--color);
 }
 
 .article-metadata {
     font-size: 16px;
-    color: $color-gray-text;
+    color: var(--color-100);
     text-align: center;
     margin: 10px 0;
 }
@@ -24,7 +26,7 @@
     flex-wrap: wrap;
     text-align: center;
     margin: 1em 0;
-    color: $color-gray-text;
+    color: $color-black-200;
     align-items: center;
     justify-content: center;
 }
@@ -32,7 +34,7 @@
 .article-tag {
     margin: 10px;
     font-size: 16px;
-    background-color: #0000000d;
+    background-color: var(--background-100);
     padding: 5px 10px;
     border-radius: 3px;
 }
@@ -47,7 +49,8 @@
 
 @media (max-width: $breakpoint-mobile) {
     .article {
-        margin: 20px 10px;
+        margin: 20px 15px;
+        padding: 0;
     }
     
     .article-title {
@@ -61,7 +64,6 @@
     .article-tag {
         margin: 5px;
         font-size: 12px;
-        background-color: #0000000d;
         padding: 5px 5px;
         border-radius: 3px;
     }

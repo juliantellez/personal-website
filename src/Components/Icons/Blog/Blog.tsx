@@ -8,6 +8,7 @@ const Blog = () => (
     <svg
         className={styles.blogIcon}
         xmlns="http://www.w3.org/2000/svg"
+        aria-labelledby="blog"
         viewBox="-10 0 550 512"
     >
         <text x="135" y="290" className={styles.blogIconText}>
