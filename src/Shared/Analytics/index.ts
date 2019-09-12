@@ -1,4 +1,4 @@
-import DataLayerEvents from "./Constants/DataLayerEvents";
+import DataLayerEvents from './Constants/DataLayerEvents';
 
 class DataLayer {
     private dataLayer: any;
