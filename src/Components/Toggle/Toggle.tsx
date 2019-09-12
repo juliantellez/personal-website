@@ -16,7 +16,7 @@ class Toggle extends React.Component {
         });
     }
 
-    public onClick = () => {
+    public onClick(): void {
         const currentTheme = this.node.getAttribute('data-theme');
         const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
         this.node.setAttribute('data-theme', nextTheme);
@@ -30,7 +30,7 @@ class Toggle extends React.Component {
                     id="toggle"
                     defaultChecked={this.state.checked}
                     className={styles.checkbox}
-                    onClick={this.onClick}
+                    onClick={this.onClick.bind(this)}
                 />
                 <label htmlFor="toggle" className={styles.label} />
             </div>
