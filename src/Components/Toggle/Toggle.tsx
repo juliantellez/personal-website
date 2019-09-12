@@ -2,40 +2,39 @@ import * as React from 'react';
 
 import * as styles from './toggle.scss';
 
-class Toggle extends React.Component {
-    public node = document.documentElement;
+enum Theme {
+    LIGHT = 'light',
+    DARK = 'dark'
+}
 
-    public state = {
-        checked: true
+const HTML_ATTRIBUTE_THEME = 'data-theme';
+
+const Toggle = () => {
+    const node = document.documentElement;
+
+    const currentTheme = node.getAttribute(HTML_ATTRIBUTE_THEME);
+    const defaultChecked = currentTheme === Theme.DARK ? false : true;
+
+    const onClick = () => {
+        const nextTheme =
+            node.getAttribute(HTML_ATTRIBUTE_THEME) === Theme.DARK
+                ? Theme.LIGHT
+                : Theme.DARK;
+        node.setAttribute(HTML_ATTRIBUTE_THEME, nextTheme);
     };
 
-    public componentWillMount(): void {
-        const currentTheme = this.node.getAttribute('data-theme');
-        this.setState({
-            checked: currentTheme === 'dark' ? false : true
-        });
-    }
-
-    public onClick(): void {
-        const currentTheme = this.node.getAttribute('data-theme');
-        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        this.node.setAttribute('data-theme', nextTheme);
-    }
-
-    public render(): JSX.Element {
-        return (
-            <div>
-                <input
-                    type="checkbox"
-                    id="toggle"
-                    defaultChecked={this.state.checked}
-                    className={styles.checkbox}
-                    onClick={this.onClick.bind(this)}
-                />
-                <label htmlFor="toggle" className={styles.label} />
-            </div>
-        );
-    }
-}
+    return (
+        <div>
+            <input
+                type="checkbox"
+                id="toggle"
+                defaultChecked={defaultChecked}
+                className={styles.checkbox}
+                onClick={onClick}
+            />
+            <label htmlFor="toggle" className={styles.label} />
+        </div>
+    );
+};
 
 export default Toggle;
