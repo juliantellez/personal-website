@@ -1,4 +1,4 @@
-import IFrontMatter from 'shared/Interfaces/IFrontMatter';
+import IFrontMatter from '../../../../shared/Interfaces/IFrontMatter';
 
 import parseYml from './parseYml';
 
