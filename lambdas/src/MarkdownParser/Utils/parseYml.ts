@@ -1,10 +1,11 @@
-import * as jsYaml from 'js-yaml'
+import * as jsYaml from 'js-yaml';
 
 const parseYml = (markdown: string) => {
     if (typeof markdown !== 'string') {
-        return {}
+        return {};
     }
-    return jsYaml.safeLoad(markdown);
-}
 
-export default parseYml
+    return jsYaml.safeLoad(markdown);
+};
+
+export default parseYml;
