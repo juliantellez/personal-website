@@ -1,6 +1,6 @@
 interface IFrontMatter {
     title: string;
-    subTitle: string,
+    subTitle: string;
     description: string;
     tags: string[];
     published: boolean;

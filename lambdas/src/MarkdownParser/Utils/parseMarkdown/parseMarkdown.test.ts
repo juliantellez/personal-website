@@ -4,6 +4,8 @@ import * as path from 'path';
 
 import parseMarkdown from './parseMarkdown';
 
+// tslint:disable:max-line-length
+
 describe('parseMarkdown', () => {
     it('should parse markdown strings', () => {
         const actual = '# Foo Baz';

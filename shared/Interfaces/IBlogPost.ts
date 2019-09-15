@@ -1,4 +1,4 @@
-import IFrontMatter from "./IFrontMatter";
+import IFrontMatter from './IFrontMatter';
 
 interface IBlogPost extends IFrontMatter {
     slug: string;
