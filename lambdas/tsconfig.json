@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "lib": [
+          "es2015",
+          "es2017"
+        ],
+        "strict": true,
+        "noImplicitAny": false,
+        "baseUrl": "../",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    }
+}
