@@ -1,16 +1,12 @@
-interface IBlogPost {
+import IFrontMatter from './IFrontMatter';
+
+interface IBlogPost extends IFrontMatter {
     slug: string;
     uuid: string;
-    language: string;
-    tags: string[];
     created: string;
     updated: string;
-    readingTime: string;
-    title: string;
-    subTitle: string;
-    description: string;
     body: string;
-    coverImage: string;
+    readingTime: string;
 }
 
 export default IBlogPost;

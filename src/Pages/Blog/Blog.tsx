@@ -9,6 +9,7 @@ import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 
 const blogPostProps = {
+    published: true,
     slug: 'handling-complexity-in-lambda-functions',
     uuid: '000',
     tags: ['Serverless', 'Lambda', 'AWS Lambda', 'Middleware', 'Complexity'],

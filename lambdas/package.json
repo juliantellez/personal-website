@@ -1,0 +1,36 @@
+{
+  "name": "personal-website-lambdas",
+  "version": "1.0.0",
+  "description": "CRUD lambdas ",
+  "main": "index.js",
+  "scripts": {
+    "test": "TS_NODE_PROJECT=../config/typescript/tsconfig.node.json NODE_ENV=test mocha --opts ../config/mocha/lambdas.mocha.opts",
+    "test:watch": "npm run test -- --watch",
+    "lint:ts": "tslint --project tsconfig.json -c '../config/tslint/tslint.json' '**/*.{ts,tsx}' --exclude './**/*.d.ts'",
+    "lint:ts:fix": "npm run lint:ts -- --fix",
+    "prettier": "prettier --config ../config/prettier/.prettierrc --write '**/*.{ts,tsx,css}'",
+    "prettier:check": "prettier --config ../config/prettier/.prettierrc  --list-different '**/*.{ts,tsx,css}' --ignore-path ../config/prettier/.prettierignore"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.31",
+    "@types/chai": "^4.2.2",
+    "@types/js-yaml": "^3.12.1",
+    "@types/markdown-it": "0.0.8",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "@types/sinon": "^7.0.13",
+    "@types/uuid": "^3.4.5",
+    "aws-lambda": "^0.1.2",
+    "chai": "^4.2.0",
+    "js-yaml": "^3.13.1",
+    "lambcycle": "^0.3.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-prism": "^2.0.3",
+    "mocha": "^6.2.0",
+    "prettier": "^1.18.2",
+    "sinon": "^7.4.2",
+    "tslint": "^5.20.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "uuid": "^3.3.3"
+  }
+}
