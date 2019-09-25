@@ -5,9 +5,19 @@
     width: 100%;
 }
 
-.footer-copyrights {
-    color: $color-gray-300;
+.footer-links {
     font-size: 16px;
-    pointer-events: none;
     text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+        padding: 0 20px;
+    }
+
+    a {
+        color: $color-gray-300;
+    }
 }

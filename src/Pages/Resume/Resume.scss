@@ -1,0 +1,19 @@
+@import '../../Shared/Styles/colors';
+
+.content {
+    display: inline;
+}
+
+.print {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 13px;
+    background-color: $color-gray-200;
+    border-radius: 50%;
+
+    svg {
+        width: 25px;
+        transform: translate(0%, 10%);
+    }
+}

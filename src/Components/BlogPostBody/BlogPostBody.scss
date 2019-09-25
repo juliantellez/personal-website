@@ -78,6 +78,14 @@
         font-weight: 600;
         text-align: left;
     }
+
+    table {
+        margin: 1em 0;
+
+        th {
+            min-width: 400px;
+        }
+    }
 }
 
 
@@ -108,6 +116,30 @@
 
         img {
             height: 100%;
+        }
+
+        table {
+            margin: 1em 0;
+
+            th {
+                min-width: 100%;
+            }
+
+            tr {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            td {
+                margin-right: 10px;
+                font-size: 15px;
+                &:after {
+                    content: ", ";
+                }
+                &:last-child:after {
+                    content: "";
+                }
+            }
         }
     }
 }

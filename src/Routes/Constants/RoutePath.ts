@@ -5,6 +5,7 @@ enum RoutePath {
     BLOG_ROUTE_PARAM = '/blog/:blogId',
     BLOG_POST_LAMBDAS = '/blog/handle-complexity-in-lambdas',
 
+    RESUME = '/resume',
     HOME = '/'
 }
 
