@@ -11,7 +11,7 @@ const extractFrontMatter = (markdown = ''): IExtractFrontMatter => {
     const DELIMITER = '---';
     const parsedFrontMatter = markdown.split(DELIMITER);
     const frontMatterRaw = parsedFrontMatter[1];
-    const rawContent = parsedFrontMatter[2];
+    const rawContent = parsedFrontMatter.slice(2).join('');
 
     const frontMatter = parseYml(frontMatterRaw);
 
