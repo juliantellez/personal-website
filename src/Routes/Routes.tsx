@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Route, Switch} from 'react-router';
+import {Route, Switch} from 'react-router-dom';
 
 import PagesPath from '../Constants/PagesPath';
 import lazyImport from '../lazyImport';
@@ -32,10 +32,10 @@ const Routes = () => {
     return (
         <React.Suspense fallback={<div>loading...</div>}>
             <Switch>
-                <Route path={RoutePath.GAME_OF_LIFE} component={GameOfLife} />
-                <Route path={RoutePath.BLOG_ROUTE_PARAM} component={Blog} />
-                <Route path={RoutePath.BLOG} component={Blogs} />
-                <Route path={RoutePath.RESUME} component={Resume} />
+                <Route component={Blog} path={RoutePath.BLOG_ROUTE_PARAM} />
+                <Route component={Blogs} path={RoutePath.BLOG} />
+                <Route component={Resume} path={RoutePath.RESUME} />
+                <Route component={GameOfLife} path={RoutePath.GAME_OF_LIFE} />
                 <Route component={Home} />
             </Switch>
         </React.Suspense>
