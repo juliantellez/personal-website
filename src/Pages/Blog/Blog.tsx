@@ -1,7 +1,6 @@
 // tslint:disable:max-line-length
 
 import * as React from 'react';
-import {withRouter} from 'react-router';
 
 import BlogPost from '../../Components/BlogPost';
 import Body from '../../Components/Body/Body';
@@ -36,4 +35,4 @@ const BlogPage = () => {
     );
 };
 
-export default withRouter(BlogPage);
+export default BlogPage;
