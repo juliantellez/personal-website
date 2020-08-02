@@ -1,9 +1,10 @@
-import * as React from "react";
-import { Switch, Route } from "react-router-dom";
+import * as React from 'react';
+import {Route, Switch} from 'react-router-dom';
 
-import PagesPath from "../Constants/PagesPath";
-import lazyImport from "../lazyImport";
-import RoutePath from "./Constants/RoutePath";
+import PagesPath from '../Constants/PagesPath';
+import lazyImport from '../lazyImport';
+
+import RoutePath from './Constants/RoutePath';
 
 const Home = lazyImport(PagesPath.HOME, PagesPath.HOME, () =>
   Promise.resolve(true)
