@@ -7,9 +7,9 @@ import Routes from './Routes';
 const container = document.getElementById('main');
 
 const App = () => (
-  <Router>
-    <Routes />
-  </Router>
+    <Router>
+        <Routes />
+    </Router>
 );
 
 ReactDOM.render(<App />, container);
