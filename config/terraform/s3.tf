@@ -11,13 +11,13 @@ data "aws_iam_policy_document" "bucket" {
 }
 
 resource "aws_s3_bucket_policy" "bucket" {
-  bucket = "${aws_s3_bucket.bucket.id}"
-  policy = "${data.aws_iam_policy_document.bucket.json}"
+  bucket = aws_s3_bucket.bucket.id
+  policy = data.aws_iam_policy_document.bucket.json
 }
 
 resource "aws_s3_bucket" "bucket" {
   acl    = "private"
-  bucket = "${local.bucket_name}"
+  bucket = local.bucket_name
 
   tags = {
     application = "${lookup(local.tags, "application")}"
