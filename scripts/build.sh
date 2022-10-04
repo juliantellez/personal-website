@@ -15,5 +15,5 @@ fi
 
 webpack \
     --config $WEBPACK_CONFIG \
-    --env.NODE_ENV=$NODE_ENV \
-    --env.analyze=$ANALYZE
+    --env NODE_ENV=$NODE_ENV \
+    --env analyze=$ANALYZE

@@ -10,6 +10,7 @@
         "jsx": "react",
         "sourceMap": true,
         "downlevelIteration": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
     }
 }

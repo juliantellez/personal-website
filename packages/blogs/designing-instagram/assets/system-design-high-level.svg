@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-.5 -.5 479 197">
+  <rect width="160" height="70" x="80" y="72" fill="#fff" stroke="#000" pointer-events="none" rx="10.5" ry="10.5"/>
+  <switch transform="translate(139.5 101.5)">
+    <foreignObject width="40" height="11" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+      <div xmlns="http://www.w3.org/1999/xhtml" color="#000" display="inline-block" font-family="Helvetica" font-size="12" style="line-height:1.2;vertical-align:top;width:41px;overflow-wrap:normal;text-align:center" white-space="nowrap">
+        <div xmlns="http://www.w3.org/1999/xhtml" display="inline-block" style="text-align:inherit" text-decoration="inherit" white-space="normal">
+          System
+        </div>
+      </div>
+    </foreignObject>
+    <text x="20" y="12" font-family="Helvetica" font-size="12" text-anchor="middle">
+      System
+    </text>
+  </switch>
+  <path fill="#232f3e" d="M7.59 21.76c.7.36 1.5.57 2.35.57.84 0 1.64-.21 2.35-.57.8.05 1.74.44 2.62 1.02.96.62 1.85 1.44 2.42 2.17 1.27 1.73 1.83 3.31 1.79 6.27H.78c.05-3.55.63-4.9 2.26-6.89.75-.83 2.62-2.27 4.55-2.57zm2.35-8.98c2.43 0 4.39 1.96 4.39 4.39 0 1.64-.89 3.07-2.22 3.82h-.06v.03c-.63.35-1.34.54-2.11.54-2.43 0-4.39-1.96-4.39-4.39 0-2.43 1.96-4.39 4.39-4.39zm0-.76c-2.84 0-5.16 2.31-5.16 5.15 0 1.62.75 3.06 1.91 4-1.88.53-3.46 1.81-4.22 2.66-.01 0-.01.01-.01.01C.7 25.98 0 27.63 0 31.6c0 .1.04.2.11.27s.17.11.27.11h19.13c.21 0 .38-.16.38-.37.11-3.33-.54-5.22-1.95-7.12 0-.01 0-.01-.01-.01-.63-.81-1.56-1.67-2.6-2.35-.67-.43-1.39-.79-2.11-.98 1.14-.95 1.87-2.38 1.87-3.98 0-2.84-2.31-5.15-5.15-5.15zM7.59 181.76c.7.36 1.5.57 2.35.57.84 0 1.64-.21 2.35-.57.8.05 1.74.44 2.62 1.02.96.62 1.85 1.44 2.42 2.17 1.27 1.73 1.83 3.31 1.79 6.27H.78c.05-3.55.63-4.9 2.26-6.89.75-.83 2.62-2.27 4.55-2.57zm2.35-8.98c2.43 0 4.39 1.96 4.39 4.39 0 1.64-.89 3.07-2.22 3.82h-.06v.03c-.63.35-1.34.54-2.11.54-2.43 0-4.39-1.96-4.39-4.39 0-2.43 1.96-4.39 4.39-4.39zm0-.76c-2.84 0-5.16 2.31-5.16 5.15 0 1.62.75 3.06 1.91 4-1.88.53-3.46 1.81-4.22 2.66-.01 0-.01.01-.01.01C.7 185.98 0 187.63 0 191.6c0 .1.04.2.11.27s.17.11.27.11h19.13c.21 0 .38-.16.38-.37.11-3.33-.54-5.22-1.95-7.12 0-.01 0-.01-.01-.01-.63-.81-1.56-1.67-2.6-2.35-.67-.43-1.39-.79-2.11-.98 1.14-.95 1.87-2.38 1.87-3.98 0-2.84-2.31-5.15-5.15-5.15z" pointer-events="none"/>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" d="M20 31.64l55.42 53.44" pointer-events="none"/>
+  <path stroke="#000" stroke-miterlimit="10" d="M79.2 88.72l-7.47-2.34 3.69-1.3 1.17-3.73z" pointer-events="none"/>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" d="M80 124.5l-55.08 45.24" pointer-events="none"/>
+  <path stroke="#000" stroke-miterlimit="10" d="M20.86 173.08l3.19-7.15.87 3.81 3.57 1.6z" pointer-events="none"/>
+  <switch transform="translate(42.5 34.5)">
+    <foreignObject width="38" height="11" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+      <div xmlns="http://www.w3.org/1999/xhtml" color="#000" display="inline-block" font-family="Helvetica" font-size="12" style="line-height:1.2;vertical-align:top;text-align:left" white-space="nowrap">
+        <div xmlns="http://www.w3.org/1999/xhtml" display="inline-block" style="text-align:inherit" text-decoration="inherit">
+          Upload
+          <br/>
+        </div>
+      </div>
+    </foreignObject>
+    <text x="19" y="12" font-family="Helvetica" font-size="12" text-anchor="middle">
+      Upload&lt;br&gt;
+    </text>
+  </switch>
+  <switch transform="translate(49.5 158.5)">
+    <foreignObject width="89" height="11" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+      <div xmlns="http://www.w3.org/1999/xhtml" color="#000" display="inline-block" font-family="Helvetica" font-size="12" style="line-height:1.2;vertical-align:top;text-align:left" white-space="nowrap">
+        <div xmlns="http://www.w3.org/1999/xhtml" display="inline-block" style="text-align:inherit" text-decoration="inherit">
+          View / Download
+          <br/>
+        </div>
+      </div>
+    </foreignObject>
+    <text x="45" y="12" font-family="Helvetica" font-size="12" text-anchor="middle">
+      View / Download&lt;br&gt;
+    </text>
+  </switch>
+  <path fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M320 60.33V13.67C320 7.22 328.95 2 340 2s20 5.22 20 11.67v46.66c0 6.45-8.95 11.67-20 11.67s-20-5.22-20-11.67z" pointer-events="none"/>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M320 13.67c0 6.44 8.95 11.66 20 11.66s20-5.22 20-11.66" pointer-events="none"/>
+  <path fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M320 182.67v-49.34c0-6.81 8.95-12.33 20-12.33s20 5.52 20 12.33v49.34c0 6.81-8.95 12.33-20 12.33s-20-5.52-20-12.33z" pointer-events="none"/>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M320 133.33c0 6.81 8.95 12.34 20 12.34s20-5.53 20-12.34" pointer-events="none"/>
+  <switch transform="translate(372.5 2.5)">
+    <foreignObject width="79" height="11" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+      <div xmlns="http://www.w3.org/1999/xhtml" color="#000" display="inline-block" font-family="Helvetica" font-size="12" style="line-height:1.2;vertical-align:top;text-align:left" white-space="nowrap">
+        <div xmlns="http://www.w3.org/1999/xhtml" display="inline-block" style="text-align:inherit" text-decoration="inherit">
+          Image Storage
+          <br/>
+        </div>
+      </div>
+    </foreignObject>
+    <text x="40" y="12" font-family="Helvetica" font-size="12" text-anchor="middle">
+      Image Storage&lt;br&gt;
+    </text>
+  </switch>
+  <switch transform="translate(379.5 118.5)">
+    <foreignObject width="87" height="11" overflow="visible" pointer-events="all" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+      <div xmlns="http://www.w3.org/1999/xhtml" color="#000" display="inline-block" font-family="Helvetica" font-size="12" style="line-height:1.2;vertical-align:top;text-align:left" white-space="nowrap">
+        <div xmlns="http://www.w3.org/1999/xhtml" display="inline-block" style="text-align:inherit" text-decoration="inherit">
+          Image Metadata
+          <br/>
+        </div>
+      </div>
+    </foreignObject>
+    <text x="44" y="12" font-family="Helvetica" font-size="12" text-anchor="middle">
+      Image Metadata&lt;br&gt;
+    </text>
+  </switch>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" d="M236.04 68.77l78-29.52" pointer-events="none"/>
+  <path stroke="#000" stroke-miterlimit="10" d="M231.13 70.62l5.3-5.75-.39 3.9 2.87 2.65zM318.95 37.4l-5.3 5.75.39-3.9-2.87-2.65z" pointer-events="none"/>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" d="M242.88 141.85l68.84 21.3" pointer-events="none"/>
+  <path stroke="#000" stroke-miterlimit="10" d="M237.87 140.3l7.72-1.27-2.71 2.82.64 3.86zM316.73 164.7l-7.72 1.27 2.71-2.82-.64-3.86z" pointer-events="none"/>
+</svg>
