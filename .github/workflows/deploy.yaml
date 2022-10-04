@@ -39,4 +39,4 @@ jobs:
           cd packages/web/dist
           ls -al .
           aws --version
-          aws s3 sync . s3://$AWS_S3_BUCKET --recursive
+          aws s3 sync . s3://$AWS_S3_BUCKET
