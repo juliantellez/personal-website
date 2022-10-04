@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     env:
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
@@ -41,5 +41,7 @@ jobs:
 
       - name: DEPLOY BUILD
         run: |
-          cd packages/web
-          aws s3 sync ./build s3://$AWS_S3_BUCKET --recursive
+          cd packages/web/build
+          ls -al .
+          aws --version
+          aws s3 sync . s3://$AWS_S3_BUCKET --recursive
