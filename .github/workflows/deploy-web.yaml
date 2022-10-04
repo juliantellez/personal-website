@@ -1,0 +1,45 @@
+name: Deploy Web Builds
+
+on:
+  push
+
+# Ensures that only one deploy task per branch/environment will run at a time.
+concurrency:
+  group: environment-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: INSTALL
+        run: |
+          npm ci
+
+      - name: TEST
+        run: |
+          npm run test
+
+      - name: LINT
+        run: |
+          npm run lint
+
+      - name: BUILD
+        run: |
+          npm run build
+
+      - name: DEPLOY BUILD
+        run: |
+          cd packages/web
+          aws s3 sync ./build s3://$AWS_S3_BUCKET --recursive
