@@ -1,0 +1,45 @@
+name: Deploy Builds
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: INSTALL
+        run: |
+          npm ci
+
+      - name: TEST
+        run: |
+          npm run test
+
+      - name: LINT
+        run: |
+          npm run lint
+
+      - name: BUILD
+        run: |
+          npm run build
+
+      - name: DEPLOY BUILD
+        run: |
+          cd packages/web/dist
+          ls -al .
+          aws --version
+          aws s3 sync . s3://$AWS_S3_BUCKET
