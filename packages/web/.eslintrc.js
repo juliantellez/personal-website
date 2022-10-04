@@ -38,7 +38,7 @@ const config = {
          'plugin:import/warnings',
          'plugin:import/typescript',
     ],
-    plugins: ['@typescript-eslint', 'import', 'prettier'],
+    plugins: ['@typescript-eslint', 'import', 'prettier', "react-hooks"],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
