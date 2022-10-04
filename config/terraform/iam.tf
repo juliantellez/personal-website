@@ -40,6 +40,7 @@ output "personal_website_access_key_id" {
   value = aws_iam_access_key.personal_website_user.id
 }
 
+# terraform output personal_website_secret_access_key
 output "personal_website_secret_access_key" {
   value     = aws_iam_access_key.personal_website_user.secret
   sensitive = true
