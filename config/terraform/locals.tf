@@ -4,7 +4,7 @@ locals {
     environment   = "${var.environment}"
     gitRepo       = "github.com/juliantellez/${local.project_repo}"
     managedBy     = "Terrafrom"
-    WAFProtection = true
+    WAFProtection = false
   }
 
   enviroment_delimiter = "${var.environment == "production" ? "" : "-${var.environment}" }"

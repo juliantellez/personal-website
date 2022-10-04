@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Routes} from 'react-router';
 
 import PagesPath from '../Constants/PagesPath';
 import lazyImport from '../lazyImport';
@@ -28,18 +28,28 @@ const GameOfLife = lazyImport(
     () => Promise.resolve(true)
 );
 
-const Routes = () => {
+const AppRoutes = () => {
     return (
         <React.Suspense fallback={<div>loading...</div>}>
-            <Switch>
-                <Route component={Blog} path={RoutePath.BLOG_ROUTE_PARAM} />
-                <Route component={Blogs} path={RoutePath.BLOG} />
-                <Route component={Resume} path={RoutePath.RESUME} />
-                <Route component={GameOfLife} path={RoutePath.GAME_OF_LIFE} />
-                <Route component={Home} />
-            </Switch>
+            <Routes>
+                <Route path={RoutePath.BLOG_ROUTE_PARAM}>
+                    <Blog /> 
+                </Route>
+                <Route path={RoutePath.BLOG}>
+                    <Blogs /> 
+                </Route>
+                <Route path={RoutePath.RESUME}>
+                    <Resume /> 
+                </Route>
+                <Route path={RoutePath.GAME_OF_LIFE}>
+                    <GameOfLife /> 
+                </Route>
+                <Route path={RoutePath.HOME}>
+                    <Home /> 
+                </Route>
+            </Routes>
         </React.Suspense>
     );
 };
 
-export default Routes;
+export default AppRoutes;

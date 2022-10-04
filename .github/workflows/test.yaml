@@ -1,0 +1,39 @@
+name: Test Builds
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+
+# Ensures that only one deploy task per branch/environment will run at a time.
+concurrency:
+  group: environment-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: INSTALL
+        run: |
+          npm ci
+
+      - name: TEST
+        run: |
+          npm run test
+
+      - name: LINT
+        run: |
+          npm run lint
+
+      - name: BUILD
+        run: |
+          npm run build

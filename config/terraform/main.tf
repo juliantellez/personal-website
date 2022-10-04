@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 0.11.10"
+  required_version = ">= 1.3.0"
 
   backend "s3" {
     bucket  = "julian-tellez-tfstate"

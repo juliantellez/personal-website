@@ -10,7 +10,7 @@ import createHumanReadableDate from './Utils/createHumanReadableDate';
 import extractFrontMatter from './Utils/extractFrontMatter';
 import parseMarkdown from './Utils/parseMarkdown';
 
-const handler: Handler<IEventPayload> = async (event): Promise<IBlogPost> => {
+const parseEvent = async (event: IEventPayload): Promise<IBlogPost> =>  {
     const {rawContent, frontMatter} = extractFrontMatter(event.data);
 
     const content = parseMarkdown(rawContent);
@@ -25,17 +25,23 @@ const handler: Handler<IEventPayload> = async (event): Promise<IBlogPost> => {
         body: content,
         readingTime: calculateReadingTime(rawContent),
 
-        slug: event.slug,
+        slug: event.slug || "",
         uuid: event.uuid || uuid(),
         updated: createHumanReadableDate(date),
         created: createHumanReadableDate(
             event.created ? new Date(event.created) : date
         )
     };
+}
+
+const handler: Handler<IEventPayload> = async (event): Promise<IBlogPost> => {
+    return parseEvent(event)
 };
 
 const main = lambcycle(handler);
 
-export default {
-    main
+export {
+    handler,
+    parseEvent,
+    main as default,
 };

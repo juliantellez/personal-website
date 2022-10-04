@@ -1,6 +1,6 @@
 interface IEventPayload {
     uuid?: string;
-    slug: string;
+    slug?: string;
     data: string;
     created?: string;
 }

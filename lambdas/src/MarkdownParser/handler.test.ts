@@ -23,12 +23,12 @@ const mockContext = {
 
 const markdownPath = path.resolve(
     __dirname,
-    '../../../blogs/handling-complexity-in-lambda-functions/index.md'
+    '../../../resume/index.md'
 );
 const markdown = fs.readFileSync(markdownPath, {encoding: 'utf-8'});
 
 describe('MarkdownParser', () => {
-    it('should parse md to html', () => {
+    it.only('should parse md to html', () => {
         const event: IEventPayload = {
             data: markdown,
             slug: 'mock-slug'
@@ -56,7 +56,7 @@ describe('MarkdownParser', () => {
             });
         };
 
-        handler.main(event, mockContext, callback);
+        handler(event, mockContext, callback);
     });
 
     it('should persist uuid', done => {
@@ -74,7 +74,7 @@ describe('MarkdownParser', () => {
             done();
         };
 
-        handler.main(event, mockContext, callback);
+        handler(event, mockContext, callback);
     });
 
     it('should persist created date', done => {
@@ -93,6 +93,6 @@ describe('MarkdownParser', () => {
             done();
         };
 
-        handler.main(event, mockContext, callback);
+        handler(event, mockContext, callback);
     });
 });
