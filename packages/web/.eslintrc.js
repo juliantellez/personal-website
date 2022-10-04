@@ -1,6 +1,18 @@
 const config = {
     parser: '@typescript-eslint/parser',
     rules: {
+        /**
+         * Imports
+         */
+         '@typescript-eslint/no-unused-vars': 'error',
+         'import/order': [
+             'error',
+             {
+                 'newlines-between': 'always',
+             },
+         ],
+
+        'no-console': 'error',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
     },
@@ -11,17 +23,22 @@ const config = {
          */
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:@typescript-eslint/recommended',
-        /**
+         /**
          * Prettier
          */
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
+          'plugin:prettier/recommended',
         /**
          * React
          */
         'plugin:react/recommended',
+        /**
+         * Imports
+         */
+         'plugin:import/errors',
+         'plugin:import/warnings',
+         'plugin:import/typescript',
     ],
-    plugins: ['@typescript-eslint', 'react-hooks'],
+    plugins: ['@typescript-eslint', 'import', 'prettier'],
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
