@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import IBlogPost from '../../../shared/Interfaces/IBlogPost';
+import IBlogPost from '../../../packages/web/src/Interfaces/IBlogPost';
 import BlogPostBody from '../BlogPostBody';
 
 import * as styles from './BlogPost.scss';
