@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 
 import { RoutePath } from '../../Routes'
+import { DarkMode } from '../DarkMode/DarkMode'
 import { Social } from '../Social/Social'
-// import Toggle from '../Toggle'
 
 import * as styles from './Header.scss'
 
@@ -15,7 +15,7 @@ const Header = () => {
                     Julian Tellez
                 </Link>
                 <Social />
-                {/* <Toggle /> */}
+                <DarkMode />
             </nav>
         </header>
     )
