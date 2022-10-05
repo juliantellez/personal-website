@@ -4,6 +4,7 @@ import { useLocation, Link } from 'react-router-dom'
 import { getBlog } from '../../Api/github/getBlog'
 import IBlogPost from '../../Interfaces/IBlogPost'
 import { BaseError } from '../../Middleware/logger'
+import { Page } from '../../Module/Page/Page'
 import { RoutePath } from '../../Routes'
 import { ErrorPage } from '../Error/Error'
 
@@ -36,8 +37,7 @@ const BlogPage = () => {
     }
 
     return (
-        <div>
-            <div>Header</div>
+        <Page>
             <div>{blog?.title}</div>
             <div>{blog?.subTitle}</div>
             <div>{blog?.language}</div>
@@ -50,7 +50,7 @@ const BlogPage = () => {
             <div dangerouslySetInnerHTML={{ __html: blog?.body || '' }} />
             {error ? <div>ERROR</div> : null}
             <div>Footer</div>
-        </div>
+        </Page>
     )
 }
 

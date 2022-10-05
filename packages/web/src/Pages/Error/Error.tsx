@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useRouteError } from 'react-router-dom'
 
+import { Page } from '../../Module/Page/Page'
+
 interface ErrorMessage {
     status: number
     statusText: string
@@ -16,14 +18,14 @@ const ErrorPage: React.FC<ErrorPageProps> = (props) => {
     const error = useRouteError() as ErrorMessage
 
     return (
-        <div id="error-page">
+        <Page>
             <h1>Oops!</h1>
             <p>Sorry, an unexpected error has occurred.</p>
             <p>
                 <i>{error ? error.statusText || error.message : null}</i>
             </p>
             {props.children}
-        </div>
+        </Page>
     )
 }
 

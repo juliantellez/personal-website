@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 
 import { ApiResponseBlog, getBlogs } from '../../Api/github/getBlogs'
+import { Page } from '../../Module/Page/Page'
 import { RoutePath } from '../../Routes'
 
 const BlogsPage = () => {
@@ -13,8 +14,7 @@ const BlogsPage = () => {
     }, [])
 
     return (
-        <div>
-            <div>Header</div>
+        <Page>
             <div>
                 {blogs?.map((b) => {
                     return (
@@ -25,7 +25,7 @@ const BlogsPage = () => {
                 })}
             </div>
             <div>Footer</div>
-        </div>
+        </Page>
     )
 }
 
