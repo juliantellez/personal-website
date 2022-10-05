@@ -1,6 +1,8 @@
 import * as fs from 'fs'
 import * as path from 'path'
 
+import IBlogPost from '../../Interfaces/IBlogPost'
+
 import { parseEvent } from './handler'
 import IEventPayload from './Interfaces/IEventPayload'
 
@@ -8,14 +10,16 @@ const markdownPath = path.resolve(__dirname, '../../../../resume/index.md')
 const markdown = fs.readFileSync(markdownPath, { encoding: 'utf-8' })
 
 describe('MarkdownParser', () => {
-    it.skip('should parse md to html', () => {
+    it.only('should parse md to html', () => {
         const event: IEventPayload = {
             data: markdown,
             slug: 'mock-slug',
         }
 
         const actual = parseEvent(event)
-        ;[
+
+        type IBlogPostKeys = keyof IBlogPost
+        const keys: Array<IBlogPostKeys> = [
             'title',
             'subTitle',
             'description',
@@ -28,7 +32,9 @@ describe('MarkdownParser', () => {
             'uuid',
             'updated',
             'created',
-        ].forEach((key) => {
+        ]
+
+        keys.forEach((key) => {
             expect(actual[key]).not.toBeNull()
         })
     })
