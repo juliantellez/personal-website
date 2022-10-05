@@ -1,4 +1,4 @@
-import { parseEvent } from "../../../lambdas/src/MarkdownParser/handler";
+import { parseEvent } from "../../../packages/web/src/Controller/MarkdownParser/handler";
 import { config } from "../config";
 import { getRawContent } from "./getRawContent";
 

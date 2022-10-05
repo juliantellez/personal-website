@@ -1,7 +1,7 @@
 // tslint:disable:max-line-length
 
 import * as React from 'react';
-import IBlogPost from '../../../shared/Interfaces/IBlogPost';
+import IBlogPost from '../../../packages/web/src/Interfaces/IBlogPost';
 import { getResume } from '../../Api/github/getResume';
 
 import BlogPost from '../../Components/BlogPost';

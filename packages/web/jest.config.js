@@ -2,7 +2,8 @@ const filExtensions =
     '\\.(css|scss|sass|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$'
 
 const config = {
-    testEnvironment: "jsdom",
+    preset: 'ts-jest',
+    testEnvironment: 'jsdom',
     moduleNameMapper: {
         [filExtensions]: 'identity-obj-proxy',
     },
@@ -10,8 +11,8 @@ const config = {
      * Watch
      */
     watchPlugins: [
-        "jest-watch-typeahead/filename",
-        "jest-watch-typeahead/testname"
+        'jest-watch-typeahead/filename',
+        'jest-watch-typeahead/testname',
     ],
     /**
      * NYC coverage
