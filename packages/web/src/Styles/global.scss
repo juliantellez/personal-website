@@ -16,12 +16,6 @@
     text-decoration: none;
 }
 
-html,
-body,
-:global(#main) {
-    height: 100%;
-}
-
 html {
     @each $variable, $value in $theme-default {
         #{$variable}: $value;

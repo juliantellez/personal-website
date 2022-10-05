@@ -4,6 +4,11 @@
 .header {
     padding: 10px 15px;
     border-bottom: 1px solid $color-gray-200;
+    background-color: var(--background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .nav {
@@ -19,9 +24,6 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-    .nav {
-        flex-direction: column;
-    }
     .nav-element {
         margin-bottom: 5px;
     }

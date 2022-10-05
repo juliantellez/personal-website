@@ -49,7 +49,6 @@ const BlogPage = () => {
             />
             <div dangerouslySetInnerHTML={{ __html: blog?.body || '' }} />
             {error ? <div>ERROR</div> : null}
-            <div>Footer</div>
         </Page>
     )
 }

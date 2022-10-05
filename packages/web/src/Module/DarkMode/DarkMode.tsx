@@ -12,11 +12,16 @@ enum Theme {
 const HTML_ATTRIBUTE_THEME = 'data-theme'
 
 const DarkMode = () => {
-    const [theme, setTheme] = React.useState<Theme>(Theme.LIGHT)
+    const node = document.documentElement
+    const currentTheme =
+        node.getAttribute(HTML_ATTRIBUTE_THEME) === Theme.DARK
+            ? Theme.DARK
+            : Theme.LIGHT
+    const [theme, setTheme] = React.useState<Theme>(currentTheme)
+
     React.useEffect(() => {
-        const node = document.documentElement
         node.setAttribute(HTML_ATTRIBUTE_THEME, theme)
-    }, [theme])
+    }, [node, theme])
 
     const onClick = () => {
         setTheme((prev) => {
