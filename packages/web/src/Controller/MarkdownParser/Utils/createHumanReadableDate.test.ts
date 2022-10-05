@@ -1,12 +1,10 @@
-import {assert} from 'chai';
-
-import createHumanReadableDate from './createHumanReadableDate';
+import createHumanReadableDate from './createHumanReadableDate'
 
 describe('createHumanReadableDate', () => {
     it('should parse unix into a readable date', () => {
-        const actual = createHumanReadableDate(new Date(1538523952846));
-        const expected = 'Oct 3, 2018';
+        const actual = createHumanReadableDate(new Date(1538523952846))
+        const expected = '3 Oct 2018'
 
-        assert.equal(actual, expected);
-    });
-});
+        expect(actual).toBe(expected)
+    })
+})

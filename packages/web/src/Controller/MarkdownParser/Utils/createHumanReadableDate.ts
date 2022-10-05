@@ -1,4 +1,4 @@
-const LOCALE_ENGLISH = 'en-GB';
+const LOCALE_ENGLISH = 'en-GB'
 
 const createHumanReadableDate = (
     date: Date = new Date(),
@@ -7,8 +7,8 @@ const createHumanReadableDate = (
     return new Date(date).toLocaleDateString(locale, {
         day: 'numeric',
         month: 'short',
-        year: 'numeric'
-    });
-};
+        year: 'numeric',
+    })
+}
 
-export default createHumanReadableDate;
+export default createHumanReadableDate

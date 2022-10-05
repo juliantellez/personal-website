@@ -6,9 +6,8 @@ import createHumanReadableDate from './Utils/createHumanReadableDate'
 import extractFrontMatter from './Utils/extractFrontMatter'
 import parseMarkdown from './Utils/parseMarkdown'
 
-const parseEvent = async (event: IEventPayload): Promise<IBlogPost> => {
+const parseEvent = (event: IEventPayload): IBlogPost => {
     const { rawContent, frontMatter } = extractFrontMatter(event.data)
-    console.log({ rawContent, frontMatter })
     const content = parseMarkdown(rawContent)
     const description = parseMarkdown(frontMatter.description)
 
