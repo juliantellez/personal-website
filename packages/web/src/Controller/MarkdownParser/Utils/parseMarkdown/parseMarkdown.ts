@@ -1,5 +1,5 @@
 import * as MarkdownIt from 'markdown-it'
-import prism from 'markdown-it-prism'
+// import prism from 'markdown-it-prism'
 
 const parseMarkdown = (markdown: string): string => {
     if (typeof markdown !== 'string') {
@@ -7,9 +7,9 @@ const parseMarkdown = (markdown: string): string => {
     }
 
     const md = new MarkdownIt()
-    md.use(prism, {
-        defaultLanguage: 'javascript',
-    })
+    // md.use(prism, {
+    //     defaultLanguage: 'javascript',
+    // })
 
     return md.render(markdown)
 }

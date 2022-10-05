@@ -29,7 +29,7 @@ const sassCss: RuleSetRule = {
  */
 const rawCss: RuleSetRule = {
     test: /\.css$/,
-    resourceQuery: /^\?raw$/,
+    // resourceQuery: /^\?raw$/,
     use: ['style-loader', 'css-loader'],
 }
 

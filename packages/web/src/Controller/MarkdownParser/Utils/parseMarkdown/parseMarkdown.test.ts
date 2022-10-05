@@ -16,8 +16,7 @@ describe('parseMarkdown', () => {
         const filePath = path.resolve(__dirname, './codeBlock.md')
         const actual = fs.readFileSync(filePath, { encoding: 'utf-8' })
 
-        const expected =
-            '<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> foo <span class="token keyword">from</span> <span class="token string">\'./foo\'</span>\n<span class="token keyword">export</span> <span class="token keyword">default</span> foo\n</code></pre>\n'
+        const expected = `<pre><code class="language-javascript">import foo from './foo'\nexport default foo\n</code></pre>\n`
 
         expect(parseMarkdown(actual)).toBe(expected)
     })
