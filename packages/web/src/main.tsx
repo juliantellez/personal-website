@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { createRoot } from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
 
-import { router } from './Routes'
-
-const App: React.FC = () => (
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
-)
+import { App } from './App'
 
 const container = document.getElementById('main') as HTMLElement
 const root = createRoot(container)

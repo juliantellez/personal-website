@@ -1,12 +1,13 @@
 import * as React from 'react'
 
+import { Page } from '../../Module/Page/Page'
+
 const HomePage = () => {
     return (
-        <div>
-            <div>Header</div>
+        <Page>
             <div>HOME</div>
             <div>Footer</div>
-        </div>
+        </Page>
     )
 }
 

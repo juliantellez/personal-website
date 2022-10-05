@@ -1,0 +1,42 @@
+@import "../../Styles/colors";
+
+$size: 20px;
+
+.button {
+    width: $size;
+    height: $size;
+    margin: 5px;
+}
+
+.label { 
+    position : relative;
+    display : inline-block;
+    width : $size;
+    height : calc(#{$size}/2);
+    background-color: $color-gray-200;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: $color-white;
+        top: 1px;
+        left: 1px;
+        transition: all 0.3s;
+      }
+}
+
+.checkbox {
+    display : none;
+}
+
+.checkbox:checked + .label:after {
+    left : 16px;
+}
+.checkbox:checked + .label {
+    background-color: $color-black-300;
+}
