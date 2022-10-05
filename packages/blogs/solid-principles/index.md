@@ -1,3 +1,7 @@
+---
+title: Solid Principles
+---
+
 ## Solid Principles
 
 What does solid mean?

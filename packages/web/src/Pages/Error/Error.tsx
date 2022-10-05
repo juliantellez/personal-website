@@ -8,7 +8,11 @@ interface ErrorMessage {
     data: unknown
 }
 
-const ErrorPage = () => {
+interface ErrorPageProps {
+    children?: React.ReactNode
+}
+
+const ErrorPage: React.FC<ErrorPageProps> = (props) => {
     const error = useRouteError() as ErrorMessage
 
     return (
@@ -16,8 +20,9 @@ const ErrorPage = () => {
             <h1>Oops!</h1>
             <p>Sorry, an unexpected error has occurred.</p>
             <p>
-                <i>{error.statusText || error.message}</i>
+                <i>{error ? error.statusText || error.message : null}</i>
             </p>
+            {props.children}
         </div>
     )
 }
