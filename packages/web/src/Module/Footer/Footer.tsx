@@ -1,12 +1,12 @@
-import * as React from 'react';
-import {Link} from 'react-router-dom';
+import * as React from 'react'
+import { Link } from 'react-router-dom'
 
-import RoutePath from '../../Routes/Constants/RoutePath';
+import { RoutePath } from '../../Routes'
 
-import * as styles from './footer.scss';
+import * as styles from './Footer.scss'
 
 const Footer = () => {
-    const getYear = () => new Date().getFullYear();
+    const getYear = () => new Date().getFullYear()
 
     return (
         <footer className={styles.footer}>
@@ -19,7 +19,7 @@ const Footer = () => {
                 </li>
             </ul>
         </footer>
-    );
-};
+    )
+}
 
-export default Footer;
+export { Footer }

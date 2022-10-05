@@ -1,12 +1,18 @@
-@import '../../Shared/Styles/colors';
+@import '../../Styles/colors';
 
 .footer {
-    padding: 10px 15px;
+    padding: 5px 10px;
     width: 100%;
+    background-color: var(--background);
+    border-top: 1px solid $color-gray-200;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer-links {
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
     list-style: none;
     display: flex;

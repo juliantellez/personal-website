@@ -24,7 +24,6 @@ const BlogsPage = () => {
                     )
                 })}
             </div>
-            <div>Footer</div>
         </Page>
     )
 }

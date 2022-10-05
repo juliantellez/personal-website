@@ -5,7 +5,6 @@ import { RoutePath } from '../../Routes'
 import {
     IconCV,
     IconGithub,
-    IconInstagram,
     IconLinkedIn,
     IconMail,
     IconTwitter,
@@ -25,23 +24,13 @@ const Social = () => {
     return (
         <ul className={styles.list}>
             <li className={styles.listElement}>
-                <Link to={RoutePath.BLOGS}>
-                    <span>Blog</span>
-                </Link>
-            </li>
-            <li className={styles.listElement}>
-                <Link to={RoutePath.RESUME}>
-                    <IconCV />
-                </Link>
+                <a href={urls.github} target="_blank" rel="noreferrer">
+                    <IconGithub />
+                </a>
             </li>
             <li className={styles.listElement}>
                 <a href={urls.twitter} target="_blank" rel="noreferrer">
                     <IconTwitter />
-                </a>
-            </li>
-            <li className={styles.listElement}>
-                <a href={urls.instagram} target="_blank" rel="noreferrer">
-                    <IconInstagram />
                 </a>
             </li>
             <li className={styles.listElement}>
@@ -50,14 +39,14 @@ const Social = () => {
                 </a>
             </li>
             <li className={styles.listElement}>
-                <a href={urls.github} target="_blank" rel="noreferrer">
-                    <IconGithub />
-                </a>
-            </li>
-            <li className={styles.listElement}>
                 <a href={urls.mail}>
                     <IconMail />
                 </a>
+            </li>
+            <li className={styles.listElement}>
+                <Link to={RoutePath.RESUME}>
+                    <IconCV />
+                </Link>
             </li>
         </ul>
     )
