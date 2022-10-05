@@ -1,8 +1,8 @@
 interface IEventPayload {
-    uuid?: string;
-    slug?: string;
-    data: string;
-    created?: string;
+    uuid?: string
+    slug?: string
+    data: string
+    created?: string
 }
 
-export default IEventPayload;
+export default IEventPayload

@@ -1,3 +1,3 @@
-import parseMarkdown from './parseMarkdown';
+import parseMarkdown from './parseMarkdown'
 
-export default parseMarkdown;
+export default parseMarkdown

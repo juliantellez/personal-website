@@ -11,7 +11,6 @@ const ResumePage = () => {
         })
     }, [])
 
-    console.log({ resume })
     return (
         <div>
             <div>{resume?.title}</div>
