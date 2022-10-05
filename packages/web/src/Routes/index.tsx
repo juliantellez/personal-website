@@ -7,7 +7,7 @@ import { ErrorPage } from '../Pages/Error/Error'
 import { HomePage } from '../Pages/Home/Home'
 import { ResumePage } from '../Pages/Resume/Resume'
 
-enum RoutePath {
+export enum RoutePath {
     HOME = '/',
     BLOGS = '/blog',
     BLOG = '/blog/:blogId',

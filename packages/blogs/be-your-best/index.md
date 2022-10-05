@@ -1,3 +1,7 @@
+---
+title: Be your best
+---
+
 # Be your best
 
 ## What makes success?

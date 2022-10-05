@@ -1,6 +1,6 @@
 const logger = console
 
-interface BaseError {
+export interface BaseError {
     message: string
     error: Error
 }
