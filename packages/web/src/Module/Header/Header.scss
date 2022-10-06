@@ -9,12 +9,30 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: end;
+}
+
+.nav-group {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+.list-element span {
+    color: var(--color);
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0 5px;
+
+    border: 1px solid var(--color);
+    border-radius: 3px;
+    padding: 2px 10px;
 }
 
 .nav-element {

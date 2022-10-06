@@ -5,6 +5,8 @@ import { ApiResponseBlog, getBlogs } from '../../Api/github/getBlogs'
 import { Page } from '../../Module/Page/Page'
 import { RoutePath } from '../../Routes'
 
+import * as styles from './Blogs.scss'
+
 const BlogsPage = () => {
     const [blogs, setBlogs] = React.useState<ApiResponseBlog[]>()
     React.useEffect(() => {
@@ -15,11 +17,14 @@ const BlogsPage = () => {
 
     return (
         <Page>
-            <div>
+            <div className={styles.header}>
+                <div className={styles.title}>Blog Index</div>
+            </div>
+            <div className={styles.content}>
                 {blogs?.map((b) => {
                     return (
                         <Link key={b.name} to={`${RoutePath.BLOGS}/${b.path}`}>
-                            <div>{b.name}</div>
+                            <div className={styles.blogCta}>{b.name}</div>
                         </Link>
                     )
                 })}

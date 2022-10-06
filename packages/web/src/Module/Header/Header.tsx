@@ -1,5 +1,7 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
+import { RoutePath } from '../../Routes'
 import { DarkMode } from '../DarkMode/DarkMode'
 import { Social } from '../Social/Social'
 
@@ -10,7 +12,12 @@ const Header = () => {
         <header className={styles.header}>
             <nav className={styles.nav}>
                 <Social />
-                <DarkMode />
+                <div className={styles.navGroup}>
+                    <Link className={styles.listElement} to={RoutePath.BLOGS}>
+                        <span>Blog</span>
+                    </Link>
+                    <DarkMode />
+                </div>
             </nav>
         </header>
     )

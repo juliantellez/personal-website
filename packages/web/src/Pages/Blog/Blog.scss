@@ -1,0 +1,128 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 45px;
+}
+
+.subtitle {
+    font-size: 16px;
+}
+
+.metadata {
+    font-size: 10px;
+    padding: 5px;
+}
+
+.tags {
+    padding: 10px;
+}
+
+.tag {
+    font-size: 8px;
+    color: black;
+    background-color: var(--background-100);
+    padding: 5px;
+    margin: 5px;
+}
+
+.content {
+    margin: auto;
+    max-width: 800px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.description {
+    margin: 5px 20px 20px;
+    font-size: 16px;
+    background-color: #8d8b8b52;
+    padding: 20px;
+}
+
+.body {
+    margin: 20px;
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    ul {
+        padding: 5px 20px 10px;
+    }
+
+    p {
+        margin: 10px 0 25px;
+        img {
+            margin: 10px auto;
+        }
+    }
+
+    table {
+        background-color: #8d8b8b52;
+        margin: 20px auto;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px dashed gray;
+        }
+    }
+
+    pre {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        clear: both;
+        color: #fff;
+        color: #f5d67b;
+        background: #1b1b1b;
+        padding: 0;
+        -moz-tab-size: 2;
+        -o-tab-size: 2;
+        tab-size: 2;
+        -ms-word-break: normal;
+        word-break: normal;
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+        position: relative;
+        line-height: 28px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    pre code {
+        scrollbar-color: #666 #201c29;
+        background: none;
+        white-space: pre;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+        display: block;
+        max-width: 100%;
+        min-width: 100px;
+        font-size: 16px;
+        padding: 15px 20px 12px 22px;
+        line-height: 1.75;
+    }
+}
+

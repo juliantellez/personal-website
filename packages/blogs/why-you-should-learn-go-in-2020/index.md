@@ -1,5 +1,6 @@
 ---
 title: learn go
+published: false
 ---
 
 # What is go
