@@ -1,5 +1,6 @@
 ---
 title: Other People’s Dotfiles
+published: false
 ---
 
 I love configuring new development machines. Over time I have collected some tools to improve my workflow and thought It would be interesting to share them here with you.

@@ -1,5 +1,6 @@
 ---
 title: Your very own Personal Cloud powered by Raspberry Pi
+published: false
 ---
 
 In an effort to learn and better understand the layers of the cloud, I have decided to re-create a small cloud provider at home. For the purposes of this experiment we would narrow down the cloud's scope to provision storage, networking. 

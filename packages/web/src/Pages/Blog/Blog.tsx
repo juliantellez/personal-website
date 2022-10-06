@@ -8,6 +8,8 @@ import { Page } from '../../Module/Page/Page'
 import { RoutePath } from '../../Routes'
 import { ErrorPage } from '../Error/Error'
 
+import * as styles from './Blog.scss'
+
 const BlogPage = () => {
     const location = useLocation()
     const [blog, setBlog] = React.useState<IBlogPost>()
@@ -36,18 +38,45 @@ const BlogPage = () => {
         )
     }
 
+    if (!blog?.published) {
+        return (
+            <Page>
+                <div className={styles.header}>
+                    <div className={styles.title}>{blog?.title}</div>
+                    <div>This Blog is being drafted</div>
+                    <Link to={RoutePath.BLOGS}>Back to Blogs</Link>
+                </div>
+            </Page>
+        )
+    }
+
     return (
         <Page>
-            <div>{blog?.title}</div>
-            <div>{blog?.subTitle}</div>
-            <div>{blog?.language}</div>
-            <div>{blog?.readingTime}</div>
-            <div>{blog?.tags}</div>
+            <div className={styles.header}>
+                <div className={styles.title}>{blog?.title}</div>
+                <div className={styles.subtitle}>{blog?.subTitle}</div>
+                <div className={styles.tags}>
+                    {blog?.tags.map((t) => (
+                        <span className={styles.tag} key={t}>
+                            {t}
+                        </span>
+                    ))}
+                </div>
+                <div className={styles.metadata}>{blog?.readingTime}</div>
+            </div>
+            <div className={styles.content}>
+                <div
+                    className={styles.description}
+                    dangerouslySetInnerHTML={{
+                        __html: blog?.description || '',
+                    }}
+                />
+                <div
+                    className={styles.body}
+                    dangerouslySetInnerHTML={{ __html: blog?.body || '' }}
+                />
+            </div>
 
-            <div
-                dangerouslySetInnerHTML={{ __html: blog?.description || '' }}
-            />
-            <div dangerouslySetInnerHTML={{ __html: blog?.body || '' }} />
             {error ? <div>ERROR</div> : null}
         </Page>
     )

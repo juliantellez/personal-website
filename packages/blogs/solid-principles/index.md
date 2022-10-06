@@ -1,5 +1,6 @@
 ---
 title: Solid Principles
+published: false
 ---
 
 ## Solid Principles

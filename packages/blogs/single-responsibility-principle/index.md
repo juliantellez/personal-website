@@ -6,8 +6,8 @@ description: >
 tags:
     - SOLID
     - Best Practices
-published: false
 coverImage: 'https://alloutdoor.2dimg.com/1/1285064094_34.jpg'
+published: false
 ---
 
 ## Analogy

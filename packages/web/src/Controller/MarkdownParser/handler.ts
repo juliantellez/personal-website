@@ -15,7 +15,6 @@ const parseEvent = (event: IEventPayload): IBlogPost => {
 
     return {
         ...frontMatter,
-
         description,
         body: content,
         readingTime: calculateReadingTime(rawContent),

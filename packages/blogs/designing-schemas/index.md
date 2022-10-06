@@ -1,5 +1,6 @@
 ---
 title: Designing Schemas
+published: false
 ---
 
 # What is a schema

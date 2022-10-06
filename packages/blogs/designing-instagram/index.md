@@ -6,6 +6,7 @@ tags:
     - Instagram
     - Picassa
     - Flickr
+published: false
 ---
 
 Stolen from : https://www.educative.io/courses/grokking-the-system-design-interview/m2yDVZnQ8lG
