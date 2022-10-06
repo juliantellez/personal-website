@@ -28,4 +28,14 @@
     border-radius: 5px;
     padding: 20px 10px;
     text-align: center;
+
+    &-title {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    &-description {
+        font-weight: normal;
+        font-size: 12px;
+    }
 }

@@ -1,5 +1,7 @@
+import IBlogPost from '../../Interfaces/IBlogPost'
 import { config } from '../config'
 
+import { getBlog } from './getBlog'
 import { getRawContent } from './getRawContent'
 
 export interface ApiResponseBlog {
@@ -7,15 +9,10 @@ export interface ApiResponseBlog {
     path: string
 }
 
-const getBlogs = () => {
+const getBlogs = (): Promise<IBlogPost[]> => {
     return getRawContent<ApiResponseBlog[]>(config.getBlogs).then(
         (response) => {
-            return response.map((r) => {
-                return {
-                    name: r.name.replace(/-/g, ' '),
-                    path: r.name,
-                }
-            })
+            return Promise.all(response.map((r) => getBlog(r.name)))
         }
     )
 }

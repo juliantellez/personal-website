@@ -6,6 +6,7 @@ import { getRawContent } from './getRawContent'
 const getBlog = (id: string) => {
     return getRawContent<string>(config.getBlog(id)).then((response) => {
         return parseEvent({
+            slug: id,
             data: response,
         })
     })
