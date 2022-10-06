@@ -4,6 +4,8 @@ import IBlogPost from '../../Interfaces/IBlogPost'
 import { getResume } from '../../Api/github/getResume'
 import { Page } from '../../Module/Page/Page'
 
+import * as styles from './Resume.scss'
+
 const ResumePage = () => {
     const [resume, setResume] = React.useState<IBlogPost>()
     React.useEffect(() => {
@@ -14,16 +16,31 @@ const ResumePage = () => {
 
     return (
         <Page>
-            <div>{resume?.title}</div>
-            <div>{resume?.subTitle}</div>
-            <div>{resume?.language}</div>
-            <div>{resume?.readingTime}</div>
-            <div>{resume?.tags}</div>
+            <div className={styles.header}>
+                <div className={styles.title}>{resume?.title}</div>
+                <div className={styles.subtitle}>{resume?.subTitle}</div>
+                <div className={styles.metadata}>{resume?.readingTime}</div>
+                <div className={styles.tags}>
+                    {resume?.tags.map((t) => (
+                        <span className={styles.tag} key={t}>
+                            {t}
+                        </span>
+                    ))}
+                </div>
+            </div>
 
-            <div
-                dangerouslySetInnerHTML={{ __html: resume?.description || '' }}
-            />
-            <div dangerouslySetInnerHTML={{ __html: resume?.body || '' }} />
+            <div className={styles.content}>
+                <div
+                    className={styles.description}
+                    dangerouslySetInnerHTML={{
+                        __html: resume?.description || '',
+                    }}
+                />
+                <div
+                    className={styles.body}
+                    dangerouslySetInnerHTML={{ __html: resume?.body || '' }}
+                />
+            </div>
         </Page>
     )
 }
