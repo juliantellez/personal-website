@@ -14,9 +14,6 @@ const Footer = () => {
                 <li>
                     <Link to={RoutePath.HOME}>Julian Tellez © {getYear()}</Link>
                 </li>
-                <li>
-                    <Link to={RoutePath.RESUME}>Resume</Link>
-                </li>
             </ul>
         </footer>
     )
