@@ -30,7 +30,7 @@ const parseMarkdown = (markdown: string): string => {
                 )
             }
         },
-    })
+    }) as MarkdownIt
 
     return md.render(markdown)
 }
