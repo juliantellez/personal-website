@@ -1,25 +1,17 @@
 ---
+published: true
 title: Handling complexity in lambda functions
 subTitle: ''
-description: >
-    "
-    ### TLDR;
-    > Middlewares can handle the complexity of your lambdas while isolating business logic and cross-cutting concerns in reusable components that can be modelled by event cycles.
-    "
+description: |
+   Middlewares can handle the complexity of your lambdas while isolating business logic and cross-cutting
+   concerns in reusable components that can bee modelled by event cycles.
 tags:
     - lambda
     - aws-lambda
     - serverless
     - aws
-published: true
 coverImage: 'https://miro.medium.com/max/8512/0*kbFW_oMK_p_EP4jH'
 ---
-
-# Handling complexity in lambda functions
-
-### TLDR;
-
-> Middlewares can handle the complexity of your lambdas while isolating business logic and cross-cutting concerns in reusable components that can be modelled by event cycles.
 
 I have had the luck and pleasure of working with lambda functions recently and boy I am having fun! The idea of having an event-driven execution environment is both daring and exciting.
 
