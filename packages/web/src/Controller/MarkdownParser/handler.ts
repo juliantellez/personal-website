@@ -21,7 +21,9 @@ const parseEvent = (event: IEventPayload): IBlogPost => {
 
         slug: event.slug || '',
         uuid: event.uuid || '',
-        updated: createHumanReadableDate(date),
+        updated: createHumanReadableDate(
+            event.updated ? new Date(event.updated) : date
+        ),
         created: createHumanReadableDate(
             event.created ? new Date(event.created) : date
         ),
