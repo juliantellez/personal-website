@@ -62,7 +62,10 @@ const BlogPage = () => {
                         </span>
                     ))}
                 </div>
-                <div className={styles.metadata}>{blog?.readingTime}</div>
+                <div className={styles.metadata}>
+                    <span>Last Updated: {blog?.updated} </span>
+                    <span>{blog?.readingTime}</span>
+                </div>
                 <img className={styles.coverImage} src={blog.coverImage} />
             </div>
 
