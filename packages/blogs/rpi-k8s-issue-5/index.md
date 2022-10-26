@@ -25,20 +25,21 @@ sudo lsblk -o UUID,NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL,MODEL
 ```
 
 ## 3 Format the hard drive with MKFS.ext3
-We can see that our hard drive is located at /dev/sda2, let's go ahead and format the hard drive's filesystem so it can be used by the linux system.
+We can see that our hard drive is located at /dev/sda2, let's go ahead and format the hard drive's filesystem so it can be used by the linux system. Other examples include /dev/sdb2
 
 ```sh
 sudo mkfs.ext3 -L k8s-volume /dev/sda2
 ```
 
-## 4 Create a directory for the Volume
+## 4 Create a directory for the Volume and mount it
 This could be in any location, we are going to "namespace" it under k8s-mount and label it k8s-volume-1
 
 ```sh
-sudo mkdir -p /k8s-mount/k8s-volume-1 
+sudo mkdir -p /k8s-mount/k8s-volume-1
+sudo mount /dev/sda2 /k8s-mount/k8s-volume-1 # mount disk
 ```
 
-## 5 Install the NFS server
+## 5 Install the [NFS server](https://manpages.debian.org/testing/nfs-common/nfs.5.en.html)
 
 ```sh
 sudo apt-get update
@@ -87,7 +88,14 @@ sudo exportfs -v # see current config
 showmount -e # see what is being exported
 ```
 
-## 10 Create Volume manifests
+## 10 Install the NFS client on all the other worker nodes
+
+```
+# ssh ssh ubuntu@192.168.0.xx # WOKER_NODE
+sudo apt install nfs-common -y
+```
+
+## 11 Create Volume manifests
 
 ```yaml
 # system-volume.yaml
@@ -152,7 +160,7 @@ WOKER_NODE_2=192.168.0.26 # hard drive lives here…
 ```sh
 ssh ubunut@$WOKER_NODE_1 # a woker node
 
-sudo apt install nfs-common
+sudo apt install nfs-common -y
 
 showmount -e $WOKER_NODE_2 # see what is being exported
 
@@ -175,8 +183,8 @@ ls -al /test/ # inspect drive
 Clear the test area by removing the files created previously
 
 ```sh
-sudo umount /mnt/test/
-sudo rm -rf /mnt/test
+sudo umount /test
+sudo rm -rf /test
 ```
 
 We are are now ready to start using our local storage. it is important that you know how to access the nodes independently and that you understand how to manipulate the NFS server across the network. Leave a comment if you have any questions, we will integrating with MetalLB's Load Balancer next. 
