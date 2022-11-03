@@ -14,7 +14,7 @@ language: en
 
 ## [Utility Warehouse](https://uw.co.uk/)
 - Role: Senior Software Engineer
-- Date: Dec 2019 — present (2 yrs 10 mos +)
+- Date: Dec 2019 — present (3 yrs)
 
 Utility Warehouse is a multi service provider on a mission to bundle all home
 services into one simple bill. I have been involved in multiple user facing
