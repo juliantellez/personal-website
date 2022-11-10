@@ -16,14 +16,15 @@ Since our cluster is running on [bare metal](https://en.wikipedia.org/wiki/Bare_
 
 In this Lab we will be implementing [MetalLB](https://metallb.universe.tf/) a solution that offers network balancing so that external traffic and services can communicate with our cluster.
 
-## 1. Requirements
+## 1 Requirements
    - [1 k8s cluster](https://www.linkedin.com/pulse/raspberry-pi-kubernetes-cluster-start-issue-4-julian-tellez/) with a [compatible CNI](https://metallb.universe.tf/installation/network-addons/)
 
-## 2. Preparation
+## 2 Preparation
 
 Please check the compatibility matrix before you implement MetalLB, if you are following this series you would have installed [Flannel](https://github.com/flannel-io/flannel) and therefore are good to go! Kubernetes [CNI](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/) integrations are very interesting a worth a read on their own right. [Calico](https://projectcalico.docs.tigera.io/about/about-networking) for example, has a really interesting implementation and definitely worth exploring.
 
-## 3. Installation
+## 3 Installation
+
 Version 0.13.5 has come a long way an integrating with MetalLB is incredibly simple. [see reference](https://metallb.universe.tf/installation/#installation-with-kustomize). We will resource this latest version and supply a configuration file along with it.
 
 ```yaml
@@ -75,7 +76,8 @@ kubectl apply -k <kustomization_directory>
 
 ![](https://media-exp1.licdn.com/dms/image/D4D12AQEBbc22sIMqCQ/article-inline_image-shrink_1500_2232/0/1668094779053?e=1673481600&v=beta&t=10Kxtx9KLfZ6odFO6i9xDy59IyZWtBHo_nV0UM5e0JY)
 
-## 4. Test the Load Balancer
+## 4 Test the Load Balancer
+
 Let's deploy an nginx service and assign a load balancer to it
 
 ```bash
