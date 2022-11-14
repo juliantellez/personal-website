@@ -3,7 +3,7 @@ title: "Raspberry Pi Kubernetes Cluster — NFS Storage | Issue #5"
 subTitle: ''
 description: |
     Today’s issue will walk you through installing and creating a [Network File Storage](https://en.wikipedia.org/wiki/Network_File_System) (NFS) server so it can be used as our default cluster's storage.
-Tags:
+tags:
     - Kubernetes
     - raspberryPi
 published: true
