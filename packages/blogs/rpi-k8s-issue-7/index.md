@@ -7,7 +7,7 @@ tags:
     - kubernetes
     - raspberryPi
 published: true
-coverImage: 'https://media-exp1.licdn.com/dms/image/D4E12AQGNfFPRQUZEmQ/article-cover_image-shrink_720_1280/0/1665420704755?e=1671062400&v=beta&t=sgb6xZ_HHymYqGqWiPXgklFU0U1ruT3IvQXzCsrENpQ'
+coverImage: 'https://labs.openai.com/s/FFU5hrgvN4mj2Zkman9l81qw'
 ---
 
 # Introduction
