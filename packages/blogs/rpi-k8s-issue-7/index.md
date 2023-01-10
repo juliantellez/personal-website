@@ -7,7 +7,7 @@ tags:
     - kubernetes
     - raspberryPi
 published: true
-coverImage: 'https://labs.openai.com/s/FFU5hrgvN4mj2Zkman9l81qw'
+coverImage: 'https://openai-labs-public-images-prod.azureedge.net/user-N3HHaQIFpG8CrToc7ekwJODP/generations/generation-FFU5hrgvN4mj2Zkman9l81qw/image.webp'
 ---
 
 # Introduction
