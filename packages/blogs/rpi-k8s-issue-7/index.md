@@ -17,7 +17,7 @@ Secrets are an important aspect of any cloud-based application, and this is espe
 One tool that can help prevent secrets leaks in Git repositories is git-secrets. Git-secrets is a command-line utility that scans Git commits and branches for any potentially sensitive information, such as passwords or API keys. By using git-secrets, you can ensure that sensitive information is not accidentally committed to your Git repository and made public.
 
 In this blog post, we will explore how to integrate git-secrets into your Kubernetes workflow to improve the security of your deployments. We will cover topics such as setting up git-secrets, using it to scan for secrets in Kubernetes configuration files, and integrating it into your CI/CD pipeline. By the end of this post, you will have a better understanding of how git-secrets can help secure your Kubernetes deployments.
-hello raul
+
 
 # Setting Up git-secrets
 
