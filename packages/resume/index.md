@@ -12,9 +12,28 @@ published: true
 language: en
 ---
 
+## [Sky](https://www.sky.com/)
+- Role: Senior Software Engineer
+- Date: Jan 2023 — Present
+
+Sky is a British broadcaster and telecommunications company that provides television
+and broadband Internet services. I have actively contributed to the endeavors of Sky,
+in enhancing the video experience on chromium browsers.
+My involvement has encompassed key initiatives such as developing Adaptive Bitrate Streaming (ABR) algorithms, optimizing bandwidth estimations, improving network request efficiencies including time to first byte (TTFB) and latency, and implementing asset retry and management strategies.
+
+| Frontend              | Backend/Devops
+| -------------         |-------------
+| React + Hooks         | Observability
+| Typescript            | Nodejs (Express)
+| Vanilla JS (es5-13)   |
+| Webpack               |
+| Sass                  |
+| Selenium              |
+
+
 ## [Utility Warehouse](https://uw.co.uk/)
 - Role: Senior Software Engineer
-- Date: Dec 2019 — present (3 yrs)
+- Date: Dec 2019 — Dec 2022 (3 yrs)
 
 Utility Warehouse is a multi service provider on a mission to bundle all home
 services into one simple bill. I have been involved in multiple user facing
