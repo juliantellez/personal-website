@@ -7,7 +7,7 @@ locals {
     WAFProtection = false
   }
 
-  enviroment_delimiter = "${var.environment == "production" ? "" : "-${var.environment}" }"
+  enviroment_delimiter = var.environment == "production" ? "" : "-${var.environment}"
 
   project_repo                = "personal-website"
   bucket_name                 = "julian-tellez-personal-website"

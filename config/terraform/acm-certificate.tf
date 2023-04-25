@@ -1,7 +1,7 @@
 resource "aws_acm_certificate" "main" {
-  domain_name       = "${local.acm_certificate_domain_name}"
+  domain_name               = local.acm_certificate_domain_name
   subject_alternative_names = ["*.${local.acm_certificate_domain_name}"]
-  validation_method = "DNS"
+  validation_method         = "DNS"
 
   tags = {
     Name        = "Wildcard - ${local.project_repo}"
