@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import IBlogPost from '../../Interfaces/IBlogPost'
 import { getResume } from '../../Api/github/getResume'
-import { Page } from '../../Module/Page/Page'
+import { DownloadPdfButton } from '../../Module/DownloadPdf/DownloadPdfButton'
 
 import * as styles from './Resume.scss'
 
@@ -15,18 +15,12 @@ const ResumePage = () => {
     }, [])
 
     return (
-        <Page>
+        <main>
+            <DownloadPdfButton filename="julian-tellez-cv.pdf" />
             <div className={styles.header}>
                 <div className={styles.title}>{resume?.title}</div>
                 <div className={styles.subtitle}>{resume?.subTitle}</div>
                 <div className={styles.metadata}>{resume?.readingTime}</div>
-                <div className={styles.tags}>
-                    {resume?.tags.map((t) => (
-                        <span className={styles.tag} key={t}>
-                            {t}
-                        </span>
-                    ))}
-                </div>
             </div>
 
             <div className={styles.content}>
@@ -41,7 +35,7 @@ const ResumePage = () => {
                     dangerouslySetInnerHTML={{ __html: resume?.body || '' }}
                 />
             </div>
-        </Page>
+        </main>
     )
 }
 

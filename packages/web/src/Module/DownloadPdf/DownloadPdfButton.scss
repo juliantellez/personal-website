@@ -1,0 +1,13 @@
+.button {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+        padding: 0 10px;
+    }
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+}
