@@ -2,8 +2,7 @@
 title: Julian Tellez
 subTitle: 'Software Engineer'
 description: >
-    Software Engineer. I create performant and fully-featured solutions using best practice standards.
-    I am passionate about high concurrency and scalability problems. I love a good design session and to build and contribute to high performant teams.
+    Experienced and results-driven Senior Software Engineer with over 8 years of expertise in delivering high-performance, scalable, and cloud-native solutions. Proficient in frontend (React, Typescript) and backend (Node.js, Go) development, excels in designing and building robust architectures using cloud platforms and containerization technologies (Kubernetes, Docker). Demonstrated commitment to excellence, extensive experience in cloud-native development, and ability to thrive in remote contracting roles make a valuable asset for organizations seeking top-tier software engineering expertise.
 tags:
     - Resume
     - Cv
@@ -16,56 +15,47 @@ language: en
 - Role: Senior Software Engineer
 - Date: Jan 2023 — Present
 
-Sky is a British broadcaster and telecommunications company that provides television
-and broadband Internet services. I have actively contributed to the endeavors of Sky,
-in enhancing the video experience on chromium browsers.
-My involvement has encompassed key initiatives such as developing Adaptive Bitrate Streaming (ABR) algorithms, optimizing bandwidth estimations, improving network request efficiencies including time to first byte (TTFB) and latency, and implementing asset retry and management strategies.
+Sky is a leading British broadcaster and telecommunications company, providing television and broadband Internet services. At Sky, I actively contribute to enhancing the video experience on chromium browsers. Key initiatives and ongoing accomplishments include:
 
-| Frontend              | Backend/Devops
-| -------------         |-------------
-| React + Hooks         | Observability
-| Typescript            | Nodejs (Express)
-| Vanilla JS (es5-13)   |
-| Webpack               |
-| Sass                  |
-| Selenium              |
+- Developed Adaptive Bitrate Streaming (ABR) algorithms to optimize video playback quality.
+- Optimized bandwidth estimations and improved network request efficiencies, including reducing time to first byte (TTFB) and latency.
+- Implemented buffer management strategies to enhance overall video streaming performance.
 
+**Technologies and Tools**:
+Frontend: React + Hooks, Typescript, Vanilla JS (es5-13), Webpack, Sass, Selenium
+
+Backend/Devops: Node.js (Express), Observability
 
 ## [Utility Warehouse](https://uw.co.uk/)
 - Role: Senior Software Engineer
 - Date: Dec 2019 — Dec 2022 (3 yrs)
 
-Utility Warehouse is a multi service provider on a mission to bundle all home
-services into one simple bill. I have been involved in multiple user facing
-projects, some of which include real time email, chat, call, reminder and payment services,
-as well as contributing to its ongoing digital transformation.
+Utility Warehouse is a multi-service provider focused on bundling all home services into one simple bill. As a Senior Software Engineer, I made significant contributions to user-facing projects and the ongoing digital transformation. Key achievements include:
 
-| Frontend              | Backend/Devops
-| -------------         |-------------
-| React + Hooks         | Cloud Native (Kubernetes - Docker - kafka)
-| GraphQl               | Terraform
-| Typescript            | Observability (Prometheus - Grafana)
-| Vanilla JS (es5-13)   | Nodejs (Express)
-| Webpack               | Go (Protobuf + gRPC)
-| Sass                  | CircleCI / Github Actions / Drone
-| Cypress               | AWS / GCP
+- Implemented real-time email, chat, call, reminder, and payment services, improving customer engagement and satisfaction.
+- Leveraged cloud-native technologies such as Kubernetes, Docker, and Kafka for scalable and resilient system architecture.
+- Ensured observability using Prometheus and Grafana, enabling proactive monitoring and efficient issue resolution.
+
+
+**Technologies and Tools**:
+Frontend: React + Hooks, GraphQl, Typescript, Vanilla JS (es5-13), Webpack, Sass, Cypress
+
+Backend/Devops: Cloud Native (Kubernetes, Docker, Kafka), Terraform, Observability (Prometheus, Grafana), Go (Protobuf + gRPC), CircleCI / Github Actions / Drone, AWS / GCP
 
 ## [DAZN](https://www.dazn.com)
 - Role: Software Engineer
 - Date: Sep 2017 — Dec 2019 (2 yrs 4 mos)
 
-Dazn is a live and on demand sports streaming service.
-Available on multiple countries and devices at home or on the go. I have had the pleasure of contributing to their playback engine, pushing the boundaries of html5 capable devices such as Xbox, SkyQ, FireStick, various smart Tvs and the Web.
+DAZN is a popular live and on-demand sports streaming service available on multiple devices. As a Software Engineer at DAZN, I played a pivotal role in improving their playback engine across various platforms. Key accomplishments include:
 
-| Frontend              | Backend/Devops
-| -------------         |-------------
-| React                 | Serverless (framework)
-| Rxjs                  | Docker
-| Mobx                  | Terraform
-| Typescript            | Nodejs (Express)
-| Vanilla JS (es5-9)    | Go
-| Webpack               | Drone / Jenkins
-| Postcss - Sass        | AWS
+- Pushed the boundaries of HTML5 capable devices, such as Xbox, SkyQ, FireStick, smart TVs, and the Web.
+- Developed and optimized video players, leveraging technologies such as Shaka, hasplayer, dashplayer, and exoPlayer.
+- Contributed to the architecture of streaming protocols, CDNs, and metrics for seamless content delivery.
+
+**Technologies and Tools**:
+Frontend: React, RxJS, Mobx, Typescript, Vanilla JS (es5-9), Webpack, PostCSS, Sass
+
+Backend/Devops: Serverless (framework), Docker, Terraform, Node.js (Express), Go, Drone / Jenkins, AWS
 
 ### Specialised
 
@@ -76,25 +66,16 @@ Available on multiple countries and devices at home or on the go. I have had the
 - Role: Software Engineer
 - Date: Oct 2015 — Sep 2017 (2 yrs)
 
-Plentific is on a mission to improve people's lives by simplifying property management.
-I have had the opportunity of working in various projects at
-Plentific, some of which include: Isomorphic landing pages, a
-React.js based Email service, a B2B dashboard, and a Payments
-service.
+Plentific is a property management platform aimed at simplifying property management processes. During my time at Plentific, I worked on various projects, including isomorphic landing pages, a React.js-based email service, a B2B dashboard, and a payments service. Key contributions include:
 
-| Frontend                                  | Backend/Devops
-| -------------                             |-------------
-| React                                     | Docker
-| Flux, Redux                               | Kubernetes (helm, deis)
-| Babel, Webpack and Gulp                   | Nodejs (Hapijs/ Express)
-| Vanilla js (es5-6)                        | Jenkins
-| Sass (BEM)                                | Aws
-| Single Page Apps / Server side rendering  |
+- Developed isomorphic landing pages, enhancing user experience and performance.
+- Built a React.js-based email service to streamline communication channels.
+- Collaborated on the development of a B2B dashboard and a payments service.
 
-### Testing
+**Technologies and Tools**:
+Frontend: React, Flux, Redux, Vanilla JS (es5-6), Babel, Webpack, Gulp, Sass (BEM), Single Page Apps / Server-side rendering
 
-- BDD cucumber + Webdriver.io
-- Visual regression
+Backend/Devops: Docker, Kubernetes (helm, deis), Node.js (Hapi.js/Express), Jenkins, AWS
 
 # Education
 
