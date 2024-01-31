@@ -19,6 +19,7 @@ language: en
 - Tools: Prometheus, Grafana, DroneCI, CircleCI, GitHub Actions
 
 ## [Sky](https://www.sky.com/)
+
 - Role: Senior Software Engineer
 - Date: Jan 2023 — Present
 
@@ -28,6 +29,7 @@ language: en
 - Actively contributed to the culture of technical excellence at Sky, mentoring junior engineers and leading initiatives to optimize video streaming performance.
 
 ## [Utility Warehouse](https://uw.co.uk/)
+
 - Role: Senior Software Engineer
 - Date: Dec 2019 — Dec 2022 (3 yrs)
 
@@ -38,6 +40,7 @@ language: en
 - Played a key role in fostering a culture of innovation and technical excellence within the engineering team.
 
 ## [DAZN](https://www.dazn.com)
+
 - Role: Software Engineer
 - Date: Sep 2017 — Dec 2019 (2 yrs 4 mos)
 
@@ -50,6 +53,7 @@ language: en
 
 
 ## [PLENTIFIC](https://plentific.com)
+
 - Role: Software Engineer
 - Date: Oct 2015 — Sep 2017 (2 yrs)
 
