@@ -14,7 +14,6 @@ language: en
 ## Technical Skills:
 
 - Languages: Go, Rust, TypeScript, JavaScript
-- Frameworks: React, Node.js, Express
 - Cloud & DevOps: Kubernetes, Docker, Kafka, Terraform, AWS, GCloud
 - Tools: Prometheus, Grafana, DroneCI, CircleCI, GitHub Actions
 
