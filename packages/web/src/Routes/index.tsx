@@ -6,12 +6,14 @@ import { BlogsPage } from '../Pages/Blogs/Blogs'
 import { ErrorPage } from '../Pages/Error/Error'
 import { HomePage } from '../Pages/Home/Home'
 import { ResumePage } from '../Pages/Resume/Resume'
+import { ResumeBackendPage } from '../Pages/Resume/ResumeBackend'
 
 export enum RoutePath {
     HOME = '/',
     BLOGS = '/blog',
     BLOG = '/blog/:blogId',
     RESUME = '/resume',
+    RESUME_BACKEND = '/resume-backend',
 }
 
 const router = createBrowserRouter([
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
     {
         path: RoutePath.RESUME,
         element: <ResumePage />,
+    },
+    {
+        path: RoutePath.RESUME_BACKEND,
+        element: <ResumeBackendPage />,
     },
 ])
 
