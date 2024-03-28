@@ -1,11 +1,9 @@
 import * as React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 import IBlogPost from '../../Interfaces/IBlogPost'
 import { DownloadPdfButton } from '../../Module/DownloadPdf/DownloadPdfButton'
-
 import { getResume } from '../../Api/github/getResume'
-import { Link, useLocation } from 'react-router-dom'
-
 import { ErrorPage } from '../Error/Error'
 import { RoutePath } from '../../Routes'
 import { BaseError } from '../../Middleware/logger'
@@ -67,4 +65,3 @@ const ResumePage = () => {
 }
 
 export { ResumePage }
-
