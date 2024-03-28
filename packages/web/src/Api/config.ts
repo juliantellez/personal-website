@@ -18,7 +18,8 @@ const getFileCommit = (path: string) => {
 const config = {
     getUser: githubUserUrl,
     getRepo: githubRepoUrl,
-    getResume: getRawContent('/packages/resume/index.md'),
+    getResume: (path: string) => getRawContent(`/packages/resume/${path}.md`),
+    getResumeFrontEnd: getRawContent('/packages/resume/index.md'),
     getResumeBackend: getRawContent('/packages/resume/backend.md'),
     getBlog: (id: string) => getRawContent(`/packages/blogs/${id}/index.md`),
     getBlogs: `${getContent('/packages/blogs')}`,

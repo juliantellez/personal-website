@@ -1,45 +1,18 @@
 import * as React from 'react'
 
 import IBlogPost from '../../Interfaces/IBlogPost'
+import { getResumeFrontEnd } from '../../Api/github/getResumeFrontend'
 import { DownloadPdfButton } from '../../Module/DownloadPdf/DownloadPdfButton'
-
-import { getResume } from '../../Api/github/getResume'
-import { Link, useLocation } from 'react-router-dom'
-
-import { ErrorPage } from '../Error/Error'
-import { RoutePath } from '../../Routes'
-import { BaseError } from '../../Middleware/logger'
 
 import * as styles from './Resume.scss'
 
-const ResumePage = () => {
-    const location = useLocation()
+const ResumeFrontEndPage = () => {
     const [resume, setResume] = React.useState<IBlogPost>()
-    const [error, setError] = React.useState<BaseError>()
-
     React.useEffect(() => {
-        if (!location.pathname) return
-        const resumeId = location.pathname.replace('/resume/', '')
-
-        getResume(resumeId).then((r) => {
-            if (!r.body) {
-                return setError({
-                    message: 'CV POST NOT FOUND',
-                    error: new Error('NOT FOUND'),
-                })
-            }
+        getResumeFrontEnd().then((r) => {
             setResume(r)
         })
     }, [])
-
-    if (error) {
-        return (
-            <ErrorPage>
-                <div>{error.message}</div>
-                <Link to={RoutePath.HOME}>Back to Home</Link>
-            </ErrorPage>
-        )
-    }
 
     return (
         <main>
@@ -66,5 +39,4 @@ const ResumePage = () => {
     )
 }
 
-export { ResumePage }
-
+export { ResumeFrontEndPage as ResumeFrontEnd }
