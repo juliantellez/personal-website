@@ -14,7 +14,8 @@ language: en
 ## Technical Skills:
 
 - Languages: Go, Rust, TypeScript, JavaScript
-- Cloud & DevOps: Kubernetes, Docker, Kafka, Terraform, AWS, GCloud, Serverless
+- Cloud Native & DevOps: Kubernetes, Docker, Kafka, Terraform, AWS, GCloud
+- Serverless: Lambda, Step Functions, SQS, SNS, Event Bridge, Dynamo
 - Tools: Prometheus, Grafana, DroneCI, CircleCI, GitHub Actions
 
 ## [Sky](https://www.sky.com/)
