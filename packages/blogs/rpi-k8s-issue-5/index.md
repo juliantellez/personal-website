@@ -4,13 +4,13 @@ subTitle: ''
 description: |
     Today’s issue will walk you through installing and creating a [Network File Storage](https://en.wikipedia.org/wiki/Network_File_System) (NFS) server so it can be used as our default cluster's storage.
 tags:
-    - kubernetes
+    - Kubernetes
     - raspberryPi
 published: true
 coverImage: 'https://media-exp1.licdn.com/dms/image/D4E12AQGNfFPRQUZEmQ/article-cover_image-shrink_720_1280/0/1665420704755?e=1671062400&v=beta&t=sgb6xZ_HHymYqGqWiPXgklFU0U1ruT3IvQXzCsrENpQ'
 ---
 
-Welcome to the Raspberry PI Kubernetes home lab series. A bite sized informative guide to help you provision a cluster from scratch. By now we should have our k8s cluster up and running! great job everyone!
+Welcome to the Raspberry PI Kubernetes home lab series. A bite-sized informative guide to help you provision a cluster from scratch. By now we should have our k8s cluster up and running! great job everyone!
 
 ## 1 Requirements
 
@@ -18,14 +18,14 @@ Welcome to the Raspberry PI Kubernetes home lab series. A bite sized informative
 - 1 external hard drive
 
 ## 2 Locate the Hard drive
-Plug your hard drive to one of your slave nodes and SSH into it to find its location
+Plug your hard drive into one of your slave nodes and SSH into it to find its location
 
 ```sh
 sudo lsblk -o UUID,NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL,MODEL
 ```
 
 ## 3 Format the hard drive with MKFS.ext3
-We can see that our hard drive is located at /dev/sda2, let's go ahead and format the hard drive's filesystem so it can be used by the linux system. Other examples include /dev/sdb2
+We can see that our hard drive is located at /dev/sda2, let's go ahead and format the hard drive's filesystem so it can be used by the Linux system. Other examples include /dev/sdb2
 
 ```sh
 sudo mkfs.ext3 -L k8s-volume /dev/sda2
@@ -56,7 +56,7 @@ sudo systemctl status nfs-server # verify is running
 
 ## 7 Allocate permissions
 
-In order to have access to your NFS server we need to create some read/write permissions
+To have access to your NFS server we need to create some read/write permissions
 
 ```sh
 # owner (read/write) group (read)
@@ -78,7 +78,7 @@ sudo nano /etc/exports
 /k8s-mount/k8s-volume-1/ *(rw,sync,no_subtree_check,insecure)
 ```
 
-We can set the permissions to be restrictive per host, let me know if you would like to see how this is done :), in the meantime is a walk through of this setup and the official docs too.
+We can set the permissions to be restrictive per host, let me know if you would like to see how this is done :), in the meantime is a walk-through of this setup and the official docs too.
 
 ## 9 Export the etc config
 
@@ -187,7 +187,7 @@ sudo umount /test
 sudo rm -rf /test
 ```
 
-We are are now ready to start using our local storage. it is important that you know how to access the nodes independently and that you understand how to manipulate the NFS server across the network. Leave a comment if you have any questions, we will integrating with MetalLB's Load Balancer next. 
+We are now ready to start using our local storage. it is important that you know how to access the nodes independently and that you understand how to manipulate the NFS server across the network. Leave a comment if you have any questions, we will be integrating with MetalLB's Load Balancer next. 
 
 Happy Coding.
 
