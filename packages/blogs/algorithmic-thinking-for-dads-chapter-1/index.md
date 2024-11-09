@@ -275,5 +275,6 @@ Remember: The goal of the decision tree isn't to make parenting mechanical, but 
 
 ________________
 
-Prev: https://juliantellez.com/blog/algorithmic-thinking-for-dads
-Next:
+Prev: [Introduction](https://juliantellez.com/blog/algorithmic-thinking-for-dads)
+
+Next: Coming soon!

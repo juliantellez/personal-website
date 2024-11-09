@@ -118,4 +118,4 @@ Remember, the goal isn't perfection – it's progress. Just as the best algorith
 
 ________________
 
-Next: https://juliantellez.com/blog/algorithmic-thinking-for-dads-chapter-1
+Next: [Chapter 1](https://juliantellez.com/blog/algorithmic-thinking-for-dads-chapter-1)
