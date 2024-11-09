@@ -115,3 +115,7 @@ The chapters that follow will guide you through specific algorithms and their ap
 By the end of this book, you'll have a comprehensive toolkit for approaching parenting challenges systematically, making decisions confidently, and continuously improving your effectiveness as a father. The result will be not just better parenting outcomes, but a more rewarding and enjoyable parenting experience.
 
 Remember, the goal isn't perfection – it's progress. Just as the best algorithms are constantly refined and improved, your parenting approach will evolve as you apply these principles and learn from the results. Welcome to the journey of algorithmic parenting – where the precision of engineering meets the heart of fatherhood.
+
+________________
+
+Next: https://juliantellez.com/blog/algorithmic-thinking-for-dads-chapter-1
