@@ -1,7 +1,7 @@
 ---
 published: true
 title: "Algorithmic thinking for dads: Chapter 1"
-subTitle: 'Chapter 1'
+subTitle: 'Decision Trees'
 description: |
     In this chapter, you'll discover how to transform challenging parenting moments into opportunities for growth using decision trees—the same logical frameworks that power modern technology. Instead of second-guessing your reactions or feeling inconsistent with your children, you'll learn how to break down difficult situations (like morning routines, screen time conflicts, and bedtime resistance) into simple, manageable decisions. Through real-world examples and practical tools, this chapter shows you how to create your own parenting game plan that's both structured enough to stay consistent and flexible enough to adapt to your family's needs. Perfect for fathers who want to bring more clarity and confidence to their daily interactions with their children.
 tags:
@@ -277,4 +277,5 @@ ________________
 
 Prev: [Introduction](https://juliantellez.com/blog/algorithmic-thinking-for-dads)
 
-Next: Coming soon!
+Next: [Chapter 2: Feedback Loops](https://juliantellez.com/blog/algorithmic-thinking-for-dads-chapter-2)
+
