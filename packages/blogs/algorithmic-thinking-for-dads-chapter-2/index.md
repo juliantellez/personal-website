@@ -432,4 +432,4 @@ ________________
 
 Prev: [Chapter 1: Decision Trees](https://juliantellez.com/blog/algorithmic-thinking-for-dads-chapter-1)
 
-Next: Chapter 3: Coming soon
+Next: [Chapter 3: Priority Queues](https://juliantellez.com/blog/algorithmic-thinking-for-dads-chapter-3)
