@@ -1,87 +1,138 @@
 ---
 title: Julian Tellez
-subTitle: 'Software Engineer'
+subTitle: 'Senior Software Engineer | Video Streaming & Cloud-Native Specialist'
 description: >
-    Dynamic Senior Software Engineer with 8+ years of experience, specializing in the development of scalable and resilient cloud-native microservices. Passionate about leveraging innovative technologies and DevOps practices to disrupt traditional industries. Eager to contribute technical expertise and a product-centric approach fast-paced environments, aiming to enhance customer experiences in competitive sectors.
+  Senior Software Engineer specialising in adaptive bitrate streaming, cloud-native architectures, and video playback optimisation across consumer platforms. Over 8 years of expertise delivering scalable, high-performance solutions in leading media and technology organisations. Proven track record improving video playback performance, architecting resilient systems, and enhancing user experiences for millions of daily users.
 tags:
-    - Resume
-    - Cv
-    - Contact
+  - Resume
+  - Cv
+  - Contact
 published: true
 language: en
 ---
 
-## Technical Skills:
+# Contact
 
-- Languages: Go, Rust, TypeScript, JavaScript
-- Cloud & DevOps: Kubernetes, Docker, Kafka, Terraform, AWS (Aurora, EC2, EKS, Lambda, Step Functions), GCloud
-- Tools: Prometheus, Grafana, DroneCI, CircleCI, GitHub Actions
-- Microservices: Extensive experience in designing, developing, and managing secure, production-ready microservices architecture in cloud environments.
+- **Location**: London, UK (Remote)
+- **Email**: juliantellezmendez@gmail.com
+- **LinkedIn**: linkedin.com/in/juliantellez
+- **GitHub**: github.com/juliantellez
 
+---
+
+# Skills
+
+- **Video Streaming**: Adaptive Bitrate Streaming (ABR), Playback Optimisation, Video Players (Shaka, TheoPlayer, castLabs, exoPlayer)
+- **Frontend Development**: React, Typescript, GraphQL, Vanilla JS (ES5-13)
+- **Backend Development**: Node.js (Express, Hapi.js), Go (Protobuf + gRPC)
+- **Cloud & DevOps**: Kubernetes, Docker, Terraform, AWS, GCP
+- **CI/CD & Observability**: CircleCI, GitHub Actions, Drone, Prometheus, Grafana
+- **Streaming Protocols**: MPEG-DASH, HLS, Streaming Heuristics, CDNs
+- **Testing & Debugging**: Cypress, Selenium, Charles Proxy, Wireshark, Jest
+
+---
+
+# Professional Experience
+
+## [ITV](https://www.itv.com/)
+- **Role:** Senior Software Engineer
+- **Date:** Mar 2025 – Present
+
+ITV is the largest commercial television network in the UK, producing, broadcasting, and streaming a wide range of content including news, entertainment, dramas, and live events via ITVX.
+
+- Engineered **playback splitting** to deliver optimised video players based on device capabilities, reducing bundle size from **1MB (gzip) to 300KB (gzip)**, significantly improving load times and user experience.
+- Developed **ad blocking detection and deterrence solutions**, protecting and increasing advertising revenue.
+- Contributed to migration from **Shaka Player to TheoPlayer**, enhancing playback performance and features.
+- Prepared the platform for **high-traffic live events** including the World Cup, ensuring stable and seamless streaming.
+
+**Technologies**: Shaka Player, TheoPlayer, hls.js, MPEG-DASH, HLS, TypeScript, JavaScript, React, Webpack, Jest, Cypress
+
+---
+
+## [castLabs](https://castlabs.com/)
+- **Role:** Senior Software Engineer
+- **Date:** Sep 2024 – Mar 2025
+
+CastLabs is a leading provider of secure digital video delivery solutions, specialising in multi-DRM licensing, cross-platform player SDKs, and content protection tools.
+
+- Developed a prototype implementing **Server-Guided Ad Insertion (SGAI)** for DASH (draft DASH-XLink) and HLS (EXT-X-DATERANGE interstitials), evaluating cross-platform compatibility and scalability for live and VOD workflows.
+- Explored hybrid ad insertion architectures to inform future monetisation strategies and seamless user experiences.
+
+**Technologies**: castLabs Player, MPEG-DASH with DASH-XLink, Apple HLS with EXT-X-DATERANGE interstitials, TypeScript, JavaScript, React, Webpack, Jest
+
+---
 
 ## [Sky](https://www.sky.com/)
+- **Role:** Senior Software Engineer
+- **Date:** Jan 2023 – Sep 2024
 
-- Role: Senior Software Engineer
-- Date: Jan 2023 — Present
+Sky is a leading British broadcaster and telecommunications company.
 
-- Spearheaded the development of Adaptive Bitrate Streaming (ABR) algorithms, significantly enhancing video playback quality on chromium browsers.
-- Played a pivotal role in architecting and implementing cloud-native solutions, emphasizing scalable and resilient system design.
-- Collaborated closely with cross-functional teams to align technical solutions with broader product strategies and user experience goals.
-- Actively contributed to the culture of technical excellence at Sky, mentoring junior engineers and leading initiatives to optimize video streaming performance.
+- Developed **Adaptive Bitrate Streaming (ABR) algorithms**, optimising video playback quality and reducing buffering events.
+- Enhanced **bandwidth estimation and network request efficiencies**, reducing time to first byte (TTFB) and playback latency.
+- Implemented **buffer management strategies** to improve streaming performance across chromium browsers.
+
+**Technologies**: React + Hooks, Typescript, Vanilla JS, Webpack, Sass, Selenium, Node.js (Express)
+
+---
 
 ## [Utility Warehouse](https://uw.co.uk/)
+- **Role:** Senior Software Engineer
+- **Date:** Dec 2019 – Dec 2022
 
-- Role: Senior Software Engineer
-- Date: Dec 2019 — Dec 2022 (3 yrs)
+Utility Warehouse is a multi-service provider bundling home services into one bill.
 
-- Ensured high system observability and proactive monitoring using Prometheus and Grafana, leading to efficient issue resolution and system reliability.
-- Spearheaded the development and deployment of real-time email, chat, call reminder, and payment services, significantly improving customer engagement and satisfaction.
-- Expertly leveraged cloud-native technologies, including Kubernetes, Docker, and Kafka, to develop scalable and resilient system architectures.
-- Actively contributed to the company's digital transformation, focusing on user-facing projects and aligning technical solutions with strategic business objectives.
-- Played a key role in fostering a culture of innovation and technical excellence within the engineering team.
+- Implemented **real-time email, chat, call, reminder, and payment services**, enhancing customer engagement scores.
+- Leveraged **cloud-native technologies (Kubernetes, Docker, Kafka)** for scalable, resilient architectures.
+- Ensured proactive monitoring and efficient resolution using **Prometheus and Grafana** observability stacks.
+
+**Technologies**: React + Hooks, GraphQL, Typescript, Vanilla JS, Webpack, Sass, Cypress, Kubernetes, Docker, Kafka, Terraform, Go, CircleCI, GitHub Actions, Drone, AWS, GCP
+
+---
 
 ## [DAZN](https://www.dazn.com)
+- **Role:** Software Engineer
+- **Date:** Sep 2017 – Dec 2019
 
-- Role: Software Engineer
-- Date: Sep 2017 — Dec 2019 (2 yrs 4 mos)
+DAZN is a leading live and on-demand sports streaming service.
 
-- Emphasized backend excellence and DevOps methodologies, using Serverless framework, Docker, Terraform, and AWS to support scalable sports streaming services.
-- Instrumental in advancing the playback engine across multiple platforms, including Xbox, SkyQ, FireStick, smart TVs, and web browsers, by pushing the boundaries of HTML5 capabilities.
-- Developed and optimized video players leveraging technologies such as Shaka, dashplayer, and exoPlayer, contributing significantly to the architecture of streaming protocols and content delivery networks (CDNs).
-- Utilized a diverse range of technologies and tools, including React, GraphQL, TypeScript, Docker, and Terraform, showcasing versatility and technical proficiency.
-- Played a pivotal role in maintaining and improving DAZN's high standards for live and on-demand sports streaming services, enhancing user experience on various devices.
-- Emphasized backend and DevOps excellence by utilizing Serverless framework, Docker, Terraform, Node.js (Express), and AWS, contributing to robust and scalable system architectures.
+- Optimised **HTML5 video playback** across devices including Xbox, SkyQ, FireStick, smart TVs, and web platforms, expanding user reach to millions.
+- Developed and maintained **video players** (Shaka, hasplayer, dashplayer, exoPlayer) to enhance playback performance.
+- Contributed to architecture of **streaming protocols, CDNs, and playback metrics** for seamless content delivery.
 
+**Technologies**: React, RxJS, Mobx, Typescript, Vanilla JS, Webpack, PostCSS, Sass, Serverless, Docker, Terraform, Node.js, Go, Drone, Jenkins, AWS
 
-## [PLENTIFIC](https://plentific.com)
+---
 
-- Role: Software Engineer
-- Date: Oct 2015 — Sep 2017 (2 yrs)
+## [Plentific](https://plentific.com)
+- **Role:** Software Engineer
+- **Date:** Oct 2015 – Sep 2017
 
-- Contributed to implementing Kubernetes with Helm and Deis to orchestrate containerized applications, significantly enhancing deployment processes and system scalability.
-- Led the development of isomorphic landing pages, significantly improving user experience and performance through innovative web technologies.
-- Engineered a React.js-based email service, streamlining communication channels and enhancing customer engagement.
-- Played a crucial role in the development of a B2B dashboard, demonstrating his ability to deliver complex, user-centric solutions.
-- Employed advanced frontend technologies including React, RxJS, Mobx, TypeScript, and Vanilla JS, showcasing versatility and depth in software development.
+Plentific is a property management platform.
 
+- Developed **isomorphic landing pages** to improve user experience and performance.
+- Built a **React.js-based email service** to streamline communications.
+- Contributed to development of a **B2B dashboard and payments service** for enterprise users.
+
+**Technologies**: React, Flux, Redux, Vanilla JS, Babel, Webpack, Gulp, Sass (BEM), Docker, Kubernetes (helm, deis), Node.js (Hapi.js, Express), Jenkins, AWS
+
+---
 
 # Education
 
 ## Middlesex University, London U.K.
-
-- Title: Bachelor of Science (B.Sc.)
-- Date: 2010 - 2013
-
-Procedural Programming (applied to sound), MatLab, DSP
+- **Degree:** Bachelor of Science (B.Sc.)
+- **Date:** 2010 – 2013
+- **Modules:** Procedural Programming (applied to sound), MatLab, DSP
 
 ## SAE Institute, London U.K.
+- **Title:** Audio Engineering Diploma
+- **Date:** 2010 – 2012
+- **Focus:** Audio Production, Creative Work
 
-- Title: Audio Engineering Diploma
-- Date: 2010 - 2012
-
-Audio Production, Creative work
+---
 
 # Languages
 
-- English
-- Spanish
+- **English:** Fluent
+- **Spanish:** Native
